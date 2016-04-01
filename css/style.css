@@ -6,28 +6,62 @@
   src: local("font/Helvetica Neue Bold"),
        local("HelveticaNeue-Bold"),
        url(MgOpenModernaBold.ttf);
-  font-weight: bold;
+  font-weight: normal;
 }
 
 html{
 	font-family:Gotham, "Helvetica Neue", Helvetica, Arial, sans-serif;
 	background-color:#59cbe8;
+	font-weight:400;
+}
+
+a{
+	text-decoration:none;
+	color:#FFFFFF;
+}
+
+/* will turn statement text white*/
+b{
+	color:white;
 	font-weight:500;
 }
 
-/* will turn text white*/
+#logo{
+	float:left;
+}
 
-b{
+#buttons{
 	color:white;
-	font-weight:200;
+	font-size:36px;
+	float:right;
+}
+
+#container{
+	height:100vh;
+	position:relative;
 }
 
 #thesisStatement{
-	font-size:30px;
-	width: 80%;
-	height: 100%;
-	overflow:hidden;
-	margin: auto;
+	font-size:29px;
+	width: 60%;
+	height:20%;
+	left: 20%;
+  	top: 20%;
+	position:absolute;
+}
+
+footer{
+	width:60%;
+	left: 20%;
+	height:20vh;
+	position:absolute;
+	top:100vh;
+}
+
+.footerHalf{
+	width:40%;
 	position:relative;
-	top: 0; left: 0; bottom: 0; right: 0;
+	margin-top:20px;
+	margin-bo:20px;
+	float:left;
 }
