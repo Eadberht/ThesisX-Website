@@ -56,12 +56,23 @@ footer{
 	height:20vh;
 	position:absolute;
 	top:100vh;
+	padding-bottom:50px;
 }
 
 .footerHalf{
 	width:40%;
 	position:relative;
 	margin-top:20px;
-	margin-bo:20px;
+	margin-bottom:20px;
 	float:left;
+	margin-left:5%;
+}
+
+.footerText{
+	width:100%;
+	position:relative;
+	margin-top:20px;
+	margin-bottom:20px;
+	float:left;
+	padding-bottom:50px;
 }
