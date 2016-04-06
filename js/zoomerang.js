@@ -33,7 +33,8 @@
         onOpen: null,
         onClose: null,
         onBeforeClose: null,
-        onBeforeOpen: null
+        onBeforeOpen: null,
+        ownWrapper: null
     }
 
     // compatibility stuff
@@ -78,7 +79,7 @@
             if (remember) {
                 original[key] = s[key] || ''
             }
-            s[key] = styles[key]
+            s[key] = styles[key];
         }
         return original
     }
@@ -167,11 +168,18 @@
                     options.transitionDuration + ' ' +
                     options.transitionTimingFunction
             })
+            if (options.ownWrapper) {
+                setStyle(wrapper,options.ownWrapper);
+            }
             return this
         },
 
-        open: function (el, cb) {
-
+        open: function (el, cb, styleTweak) {
+            /* hax */
+            if (styleTweak) {                
+                setStyle(wrapper,styleTweak,true);
+            } //
+            
             if (shown || lock) return
 
             target = typeof el === 'string'
@@ -244,7 +252,7 @@
                 cb = cb || options.onOpen
                 if (cb) cb(target)
             })
-
+            
             return this
         },
 
