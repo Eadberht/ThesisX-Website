@@ -171,3 +171,10 @@ span.project {
 	line-height:5px;
 	margin:0;
 }
+
+.closeBox{
+	width:1px;
+	height:1px;
+	background-size:contain;
+	background-color:#937549;
+}
