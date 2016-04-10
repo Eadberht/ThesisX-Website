@@ -10,17 +10,17 @@
 
 <body>
   <div  id="mainContainer" class="container-fluid">
-  <div id="wrapper">
+  <div id="wrapper ">
   
   		<div class="row">
-  		<nav class="navbar" class="col-md-2">
+  		<nav class="col-md-6 col-md-offset-3">
     		<img src="images/Within-BetweenLogo-02.png" class="brand"/>
-        	<a href="#" >x&nbsp;</a>
-        	<a href="#" >+&nbsp;</a>
+        	<a href="#" class="specialButton navbar-right" id="aboutClick">&dagger;</a>
+        	<a href="#" class="specialButton navbar-right" id="revealAll">&Dagger;</a>
     	</nav>
     	</div>
         
-      <div class="row">
+      <div class="row vcenter">
         
         <div id="thesisStatement" class="col-md-6 col-md-offset-3">
         
@@ -92,7 +92,7 @@
 
             <b>[~</b><div class="studentName">you are when you are where you are</div><b>~]</b>
 
-            <b>"*</b><div class="studentName">adobe won't fork with you</div><b>*"</b>
+            <b>"*</b><div class="studentName">adobe will not fork with you</div><b>*"</b>
 
             <div class="studentName">it is natural entropy</div><b>#/</b>
             
@@ -145,7 +145,6 @@
 <!-- Include all compiled plugins (below), or include individual files as needed -->
 <script src="js/bootstrap.js"></script>
 <script type="text/javascript" src="js/zoomerang.js"></script>
-<script type="text/javascript" src="js/test.js"></script>
 <script type="text/javascript" src="js/jquery.zoomooz-helpers.js"></script>
 <script type="text/javascript" src="js/jquery.zoomooz-anim.js"></script>
 <script type="text/javascript" src="js/jquery.zoomooz-core.js"></script>
@@ -155,5 +154,100 @@
 <script type="text/javascript" src="js/purecssmatrix.js"></script>
 <script type="text/javascript" src="js/sylvester.src.stripped.js"></script>
 
+<script>
+$(document).ready(function() {
+	var student1= "Michael Zibin Yuan";
+	var quote1= "Login for interactive obedience";
+	
+	$("#revealAll").click(function(e) {
+		
+        $(".studentName").eq(0).text(function(i, text){
+          return text === "Login for interactive obedience" ? "Michael Zibin Yuan" : "Login for interactive obedience";
+      });
+	  
+	  $(".studentName").eq(1).text(function(i, text){
+          return text === "scoff at this while reflecting on existence" ? "Moein Shashaei" : "scoff at this while reflecting on existence";
+      });
+	  
+	  $(".studentName").eq(2).text(function(i, text){
+          return text === "thou ought to" ? "Craig Roberts" : "thou ought to";
+      });
+	  
+	  $(".studentName").eq(3).text(function(i, text){
+          return text === "get in the zone" ? "Ryan Schoenherr" : "get in the zone";
+      });
+	  
+	  $(".studentName").eq(4).text(function(i, text){
+          return text === "ultimate empathy" ? "Alexis Baran" : "ultimate empathy";
+      });
+	  
+	  $(".studentName").eq(5).text(function(i, text){
+          return text === "there is strength in numbers" ? "Corwin Green" : "there is strength in numbers";
+      });
+	  
+	  $(".studentName").eq(6).text(function(i, text){
+          return text === "Dead world walking" ? "Emilia Aragon" : "Dead world walking";
+      });
+	  
+	  $(".studentName").eq(7).text(function(i, text){
+          return text === "nature inspires" ? "Katie Wylie" : "nature inspires";
+      });
+	  
+	  $(".studentName").eq(8).text(function(i, text){
+          return text === "how do you know" ? "Andrea Laszlo" : "how do you know";
+      });
+	  
+	  $(".studentName").eq(9).text(function(i, text){
+          return text === "The same only different" ? "Aryn Beitz" : "The same only different";
+      });
+	  
+	  $(".studentName").eq(10).text(function(i, text){
+          return text === "Shia LaBeouf" ? "Nicole Salamone" : "Shia LaBeouf";
+      });
+	 
+	  $(".studentName").eq(11).text(function(i, text){
+          return text === "wait what" ? "Jacqueline Anerella" : "wait what";
+      });
+	  
+	  $(".studentName").eq(12).text(function(i, text){
+          return text === "From this angle" ? "Xinyi Li" : "From this angle";
+      });
+	  
+	  $(".studentName").eq(13).text(function(i, text){
+          return text === "you are when you are where you are" ? "Kiran Puri" : "you are when you are where you are";
+      });
+	  
+		 $(".studentName").eq(14).text(function(i, text){
+          return text === "adobe will not fork with you" ? "Dina Michl" : "adobe will not fork with you";
+      });
+	  	 
+	  
+	    $(".studentName").eq(15).text(function(i, text){
+          return text === "it is natural entropy" ? "Leonor Kerke" : "it is natural entropy";
+      });
+	  
+	    $(".studentName").eq(16).text(function(i, text){
+          return text === "two dyslexics walk into a bra" ? "Abbey Roam" : "two dyslexics walk into a bra";
+      });
+	  
+	    $(".studentName").eq(17).text(function(i, text){
+          return text === "Design pedagogy reloaded" ? "Melissa Berman" : "Design pedagogy reloaded";
+      });
+	  
+    });
+	
+	
+	 $(".studentName").click(
+	 function(){
+		$(this).text(function(i, text){
+          return text === quote1 ? student1 : quote1;
+      });
+	  $(this).toggleClass('swap');
+	 });
+	
+});
+
+</script>
 </body>
+
 </html>
