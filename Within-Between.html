@@ -156,8 +156,8 @@
 
 <script>
 $(document).ready(function() {
-	var student1= "Michael Zibin Yuan";
-	var quote1= "Login for interactive obedience";
+	var michaelName= "Michael Zibin Yuan";
+	var michaelQuote= "Login for interactive obedience";
 	
 	$("#revealAll").click(function(e) {
 		
@@ -240,7 +240,7 @@ $(document).ready(function() {
 	 $(".studentName").click(
 	 function(){
 		$(this).text(function(i, text){
-          return text === quote1 ? student1 : quote1;
+          return text === michaelQuote ? michaelName : michaelQuote;
       });
 	  $(this).toggleClass('swap');
 	 });
