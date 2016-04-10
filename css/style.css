@@ -49,24 +49,13 @@ a {
     float:right;
 }
 
-/* #mainContainer{ */
-/* 	height:100vh; */
-/* 	position:relative; */
-/* } */
 
 #thesisStatement{
     font-size : 29px;
-    width : 60%;
-    left : 20%;
-    top : 40%;
-    position : absolute;
 }
 
 footer{
-    width : 60%;
-    left : 20%;
-    height : 20vh;
-    position : absolute;
+
     top : 100vh;
     padding-bottom : 50px;
 }
@@ -158,13 +147,14 @@ span.project {
 	position:relative;
 	display:inline-block;
 	font-size:.02em;
-	line-height:1em;
+	line-height:2em;
 	height:1%;
 }
 
 .space p{
-	line-height:1px;
+	line-height:4em;
 	margin:0;
+	z-index:999;
 }
 
 .space h1{
