@@ -4,14 +4,15 @@
 <meta charset="UTF-8">
 <title>Within-Between</title>
 </head>
-
-    <link rel="stylesheet" href="css/bootstrap.css"> 
+    <link rel="stylesheet" type="text/css" href="css/csshake-horizontal.css">
+    <link rel="stylesheet" type="text/css" href="css/csshake-rotate.css">
+    <link rel="stylesheet" href="css/bootstrap.css">
     <link rel="stylesheet" href="css/style.css">
 
 <body>
   <div  id="mainContainer" class="container-fluid">
   <div id="wrapper ">
-  
+
   		<div class="row">
   		<nav class="col-md-6 col-md-offset-3">
     		<img src="images/Within-BetweenLogo-02.png" class="brand"/>
@@ -19,13 +20,13 @@
         	<a href="#" class="specialButton navbar-right" id="revealAll">&Dagger;</a>
     	</nav>
     	</div>
-        
+
       <div class="row vcenter">
-        
+
         <div id="thesisStatement" class="col-md-6 col-md-offset-3">
-        
-          
-          <b class="zoomTarget">[<div class="space" ></div>*</b>
+
+
+          <b class="zoomTarget shake-horizontal">[<div class="space" ></div>*</b>
           <div class="studentName">Login for interactive obedience</div>
           <b class="zoomTarget">*
           		<div class="space">
@@ -60,28 +61,28 @@
                               dolorissit estibus, cus, sinus moleceatem. Ugitiores mag
                      		</p>
                	</div>
-            
+
             ]
-            
+
             </b>
-          	
+
             <div class="studentName">scoff at this while reflecting on existence</div>
             	<b class="zoomTarget">^—</b>
-           
+
             <div class="studentName">thou ought to</div><b>&amp;/</b>
-           
+
             <b>{%</b><div class="studentName">get in the zone</div><b>%}</b>
-           
+
             <div class="studentName">ultimate empathy</div><b>= ;</b>
-           
+
             <div class="studentName">there is strength in numbers</div><b class="zoomTarget">+!</b>
-            
+
             <div class="studentName">Dead world walking</div><b>−…</b>
-           
+
             <b>(=</b><div class="studentName">nature inspires</div><b>=)</b>
-           
+
             <div class="studentName">how do you know</div><b >+?</b>
-            
+
             <b>"+</b><div class="studentName">The same only different</div><b>+"</b>
 
             <div class="studentName">Shia LaBeouf</div><b>~—</b>
@@ -95,15 +96,15 @@
             <b>"*</b><div class="studentName">adobe will not fork with you</div><b>*"</b>
 
             <div class="studentName">it is natural entropy</div><b>#/</b>
-            
+
             <div class="studentName">two dyslexics walk into a bra</div><b>*!</b>
-            
+
             <div class="studentName">Design pedagogy reloaded</div><b>*/.</b>
 
         </div> <!-- Closes Thesis Statement-->
-      
+
       </div> <!-- Closes Row-->
-    
+
     </div><!-- Closes Wrapper-->
     </div><!-- Closes Main Container-->
 
@@ -113,21 +114,21 @@
           <p>
             (Within) — Between is the thesis exhibition for the 2016 graduating class of <b>Pratt's Graduate Communications Design Program.</b>
           </p>
-          
+
           <div class="footerHalf">
                 Opening
                 Friday May 13th, 2016 6 - 9pm
                 On view May 13 - May 27
                 Gallery open M-F 10am - 6pm
           </div>
-          
+
           <div class="footerHalf">
                 Location
                 Pratt Manhattan, 7th Floor Gallery
                 144 W. 14th Street, New York, NY 10011
                 <br/><b><a href="nba.com">Directions</a></b>
           </div>
-    
+
       <div class="footerText">
                 Iduciet pe volupta ecaeribusci aut ut reperep uditassequo
                 volore voluptassi qui alignam, nobit autatquis res aspellant
@@ -135,7 +136,7 @@
                 qui ab inctorp oremped quisqui ationsectio. Et quam et occum
                 dolorissit estibus, cus, sinus moleceatem. Ugitiores mag
       </div>
-    
+
     </footer>
 -->
 
@@ -156,87 +157,93 @@
 
 <script>
 $(document).ready(function() {
+<<<<<<< HEAD
 	var michaelName= "Michael Zibin Yuan";
 	var michaelQuote= "Login for interactive obedience";
 	
+=======
+	var student1= "Michael Zibin Yuan";
+	var quote1= "Login for interactive obedience";
+
+>>>>>>> origin/master
 	$("#revealAll").click(function(e) {
-		
+
         $(".studentName").eq(0).text(function(i, text){
           return text === "Login for interactive obedience" ? "Michael Zibin Yuan" : "Login for interactive obedience";
       });
-	  
+
 	  $(".studentName").eq(1).text(function(i, text){
           return text === "scoff at this while reflecting on existence" ? "Moein Shashaei" : "scoff at this while reflecting on existence";
       });
-	  
+
 	  $(".studentName").eq(2).text(function(i, text){
           return text === "thou ought to" ? "Craig Roberts" : "thou ought to";
       });
-	  
+
 	  $(".studentName").eq(3).text(function(i, text){
           return text === "get in the zone" ? "Ryan Schoenherr" : "get in the zone";
       });
-	  
+
 	  $(".studentName").eq(4).text(function(i, text){
           return text === "ultimate empathy" ? "Alexis Baran" : "ultimate empathy";
       });
-	  
+
 	  $(".studentName").eq(5).text(function(i, text){
           return text === "there is strength in numbers" ? "Corwin Green" : "there is strength in numbers";
       });
-	  
+
 	  $(".studentName").eq(6).text(function(i, text){
           return text === "Dead world walking" ? "Emilia Aragon" : "Dead world walking";
       });
-	  
+
 	  $(".studentName").eq(7).text(function(i, text){
           return text === "nature inspires" ? "Katie Wylie" : "nature inspires";
       });
-	  
+
 	  $(".studentName").eq(8).text(function(i, text){
           return text === "how do you know" ? "Andrea Laszlo" : "how do you know";
       });
-	  
+
 	  $(".studentName").eq(9).text(function(i, text){
           return text === "The same only different" ? "Aryn Beitz" : "The same only different";
       });
-	  
+
 	  $(".studentName").eq(10).text(function(i, text){
           return text === "Shia LaBeouf" ? "Nicole Salamone" : "Shia LaBeouf";
       });
-	 
+
 	  $(".studentName").eq(11).text(function(i, text){
           return text === "wait what" ? "Jacqueline Anerella" : "wait what";
       });
-	  
+
 	  $(".studentName").eq(12).text(function(i, text){
           return text === "From this angle" ? "Xinyi Li" : "From this angle";
       });
-	  
+
 	  $(".studentName").eq(13).text(function(i, text){
           return text === "you are when you are where you are" ? "Kiran Puri" : "you are when you are where you are";
       });
-	  
+
 		 $(".studentName").eq(14).text(function(i, text){
           return text === "adobe will not fork with you" ? "Dina Michl" : "adobe will not fork with you";
       });
-	  	 
-	  
+
+
 	    $(".studentName").eq(15).text(function(i, text){
           return text === "it is natural entropy" ? "Leonor Kerke" : "it is natural entropy";
       });
-	  
+
 	    $(".studentName").eq(16).text(function(i, text){
           return text === "two dyslexics walk into a bra" ? "Abbey Roam" : "two dyslexics walk into a bra";
       });
-	  
+
 	    $(".studentName").eq(17).text(function(i, text){
           return text === "Design pedagogy reloaded" ? "Melissa Berman" : "Design pedagogy reloaded";
       });
-	  
+
     });
-	
-	
+
+
 	 $(".studentName").click(
 	 function(){
 		$(this).text(function(i, text){
@@ -244,7 +251,7 @@ $(document).ready(function() {
       });
 	  $(this).toggleClass('swap');
 	 });
-	
+
 });
 
 </script>
