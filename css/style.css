@@ -59,17 +59,21 @@ footer{
     top : 100vh;
     padding-bottom : 50px;
 }
-
-.footerHalf {
+#about {
+background-color : #fff;
+color: black;
+Font-size: 24px;
+}
+.AboutHalf {
     width:40%;
     position:relative;
-    margin-top:20px;
-    margin-bottom:20px;
+    margin-top:40px;
+    margin-bottom:30px;
     float:left;
     margin-left:5%;
 }
 
-.footerText {
+.AboutText {
     width:100%;
     position:relative;
     margin-top:20px;
@@ -128,7 +132,7 @@ span.project {
 	height:10px;
 	width:3px;
 	display:inline-block;
-	background-color:#294720;
+	background-color:#294720;                           
 	margin-left:1px;
 	margin-right:1px;
 	vertical-align:auto;
