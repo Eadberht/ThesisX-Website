@@ -14,7 +14,7 @@
   <div id="wrapper ">
 
   		<div class="row">
-  		<nav class="col-md-6 col-md-offset-3">
+  		<nav class="col-md-12">
     		<img src="images/Within-BetweenLogo-02.png" class="brand"/>
         	<a href="#" class="specialButton navbar-right" id="aboutClick">&dagger;</a>
         	<a href="#" class="specialButton navbar-right" id="revealAll">&Dagger;</a>
@@ -23,7 +23,7 @@
 
       <div class="row vcenter">
 
-        <div id="thesisStatement" class="col-md-6 col-md-offset-3">
+        <div id="thesisStatement" class="col-md-12 ">
 
 
           <b class="zoomTarget shake-rotate">[<div class="space" ></div>*</b>
@@ -106,7 +106,29 @@
       </div> <!-- Closes Row-->
 
     </div><!-- Closes Wrapper-->
+            
     </div><!-- Closes Main Container-->
+<div id="about" style="background-color : #fff">
+          <div class='row'>
+            <div class="col-md-8 col-md-offset-2">
+          <h2>About</h2>
+          <p>
+            (Within) — Between. is the thesis exhibition for the 2016 graduating class of <b> Pratt’s Graduate Communications Design Program.</b>
+          </p>
+          <div class="AboutHalf">
+            Opening
+            <br/>Friday May 13th, 2016 6 - 9pm</br>
+            On view May 13th - May 20th
+            <br/> Gallery open M-F 10am - 6pm</br>
+          </div>
+          <div class="AboutHalf">
+            Location
+            Pratt Manhattan, 7th Floor Gallery
+            144 W. 14th Street, New York, NY 10011
+            <br/><b><a href="nba.com">Directions</a></b>
+          </div>
+          <div class="AboutText">Punctuation marks serve to clarify relationships between words and sentences, and symbols are representative of a material or object, especially one that is mmabstract. The creation of our ‘icons,’ or custom glyphs, function as punctuation marks that are specific and symbolic of something more abstract and hard to define (our personal theses). Thus, these ‘icons’ are transitional marks that are representative of very abstract connections between all of our work.</div>
+        </div><!-- Closes About -->
 
 
 <!--    <footer>
@@ -157,89 +179,26 @@
 
 <script>
 $(document).ready(function() {
-<<<<<<< HEAD
-	var michaelName= "Michael Zibin Yuan";
-	var michaelQuote= "Login for interactive obedience";
+	var aboutUp = false;
+	var namesShown = true;
+	var studentNames= ["Michael Zibin Yuan","Moein Shashaei","Craig Roberts","Ryan Schoenherr","Alexis Baran","Corwin Green","Emilia Aragon","Katie Wylie","Andrea Laszlo","Aryn Beitz","Nicole Salamone","Jacqueline Anerella","Xinyi Li","Kiran Puri","Dina Michl","Leonor Kerke","Abbey Roam","Melissa Berman"];
+	var studentQuotes= ["Login for interactive obedience","scoff at this while reflecting on existence","thou ought to","get in the zone","ultimate empathy","there is strength in numbers","Dead world walking","nature inspires","how do you know","The same only different","Shia LaBeouf","wait what","From this angle","you are when you are where you are","adobe will not fork with you","it is natural entropy","two dyslexics walk into a bra","Design pedagogy reloaded"];
 	
-=======
-	var student1= "Michael Zibin Yuan";
-	var quote1= "Login for interactive obedience";
-
->>>>>>> origin/master
+	$("#about").hide();
+	
 	$("#revealAll").click(function(e) {
-
-        $(".studentName").eq(0).text(function(i, text){
-          return text === "Login for interactive obedience" ? "Michael Zibin Yuan" : "Login for interactive obedience";
-      });
-
-	  $(".studentName").eq(1).text(function(i, text){
-          return text === "scoff at this while reflecting on existence" ? "Moein Shashaei" : "scoff at this while reflecting on existence";
-      });
-
-	  $(".studentName").eq(2).text(function(i, text){
-          return text === "thou ought to" ? "Craig Roberts" : "thou ought to";
-      });
-
-	  $(".studentName").eq(3).text(function(i, text){
-          return text === "get in the zone" ? "Ryan Schoenherr" : "get in the zone";
-      });
-
-	  $(".studentName").eq(4).text(function(i, text){
-          return text === "ultimate empathy" ? "Alexis Baran" : "ultimate empathy";
-      });
-
-	  $(".studentName").eq(5).text(function(i, text){
-          return text === "there is strength in numbers" ? "Corwin Green" : "there is strength in numbers";
-      });
-
-	  $(".studentName").eq(6).text(function(i, text){
-          return text === "Dead world walking" ? "Emilia Aragon" : "Dead world walking";
-      });
-
-	  $(".studentName").eq(7).text(function(i, text){
-          return text === "nature inspires" ? "Katie Wylie" : "nature inspires";
-      });
-
-	  $(".studentName").eq(8).text(function(i, text){
-          return text === "how do you know" ? "Andrea Laszlo" : "how do you know";
-      });
-
-	  $(".studentName").eq(9).text(function(i, text){
-          return text === "The same only different" ? "Aryn Beitz" : "The same only different";
-      });
-
-	  $(".studentName").eq(10).text(function(i, text){
-          return text === "Shia LaBeouf" ? "Nicole Salamone" : "Shia LaBeouf";
-      });
-
-	  $(".studentName").eq(11).text(function(i, text){
-          return text === "wait what" ? "Jacqueline Anerella" : "wait what";
-      });
-
-	  $(".studentName").eq(12).text(function(i, text){
-          return text === "From this angle" ? "Xinyi Li" : "From this angle";
-      });
-
-	  $(".studentName").eq(13).text(function(i, text){
-          return text === "you are when you are where you are" ? "Kiran Puri" : "you are when you are where you are";
-      });
-
-		 $(".studentName").eq(14).text(function(i, text){
-          return text === "adobe will not fork with you" ? "Dina Michl" : "adobe will not fork with you";
-      });
-
-
-	    $(".studentName").eq(15).text(function(i, text){
-          return text === "it is natural entropy" ? "Leonor Kerke" : "it is natural entropy";
-      });
-
-	    $(".studentName").eq(16).text(function(i, text){
-          return text === "two dyslexics walk into a bra" ? "Abbey Roam" : "two dyslexics walk into a bra";
-      });
-
-	    $(".studentName").eq(17).text(function(i, text){
-          return text === "Design pedagogy reloaded" ? "Melissa Berman" : "Design pedagogy reloaded";
-      });
+		namesShown = !namesShown;
+			for (i = 0; i < studentNames.length; i++) {
+			$(".studentName").eq(i).text(function(a, text){
+				if (namesShown) {
+					$(this).toggleClass('swap');
+					return studentQuotes[i];
+				} else {
+					$(this).toggleClass('swap');
+          			return studentNames[i];
+				}
+      		});
+			}	
 
     });
 
@@ -247,11 +206,31 @@ $(document).ready(function() {
 	 $(".studentName").click(
 	 function(){
 		$(this).text(function(i, text){
-          return text === michaelQuote ? michaelName : michaelQuote;
+			var index = $(this).index(".studentName");
+          return text === studentNames[index] ? studentQuotes[index] : studentNames[index];
       });
 	  $(this).toggleClass('swap');
 	 });
-
+	 
+	 $("#aboutClick").click(function(e) {
+		 if(!aboutUp){ 
+		 
+		 	$("#thesisStatement").css("z-index","-1");
+			$("#about").show(100);
+		 	$("#about").animate({"margin-top":"-50vh"}, 1000);
+			aboutUp=true;
+			
+		 }
+		 else if(aboutUp){
+			 
+			
+		 	$("#about").animate({"margin-top":"100vh"}, 500);
+			$("#about").hide(100);
+			aboutUp=false;
+			window.setTimeout("$('#thesisStatement').css('z-index','1')",1000);
+			
+		 }
+		});
 });
 
 </script>
