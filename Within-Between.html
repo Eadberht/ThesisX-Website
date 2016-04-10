@@ -14,7 +14,7 @@
   <div id="wrapper ">
 
   		<div class="row" id="navi">
-  		<nav class="col-md-10 col-md-offset-1">
+  		<nav class="col-md-10  col-md-offset-1 col-lg-10  col-lg-offset-1 col-sm-10 col-sm-offset-1">
     		<img src="images/Within-BetweenLogo-02.png" class="brand"/>
         	<a href="#" class="specialButton navbar-right" id="aboutClick">&dagger;</a>
         	<a href="#" class="specialButton navbar-right" id="revealAll">&Dagger;</a>
@@ -23,7 +23,7 @@
 
       <div class="row vcenter">
 
-        <div id="thesisStatement" class="col-md-10  col-md-offset-1">
+        <div id="thesisStatement" class="col-md-10  col-md-offset-1 col-lg-10  col-lg-offset-1 col-sm-10 col-sm-offset-1">
 
 
           <b class="zoomTarget shake-rotate">[<div class="space" ></div>*</b>
@@ -213,22 +213,25 @@ $(document).ready(function() {
 	 });
 	 
 	 $("#aboutClick").click(function(e) {
+		 var dWidth = $(window).width();
 		 if(!aboutUp){ 
 		 
 		 	$("#thesisStatement").css("z-index","-1");
-			$("#about").show(100);
-		 	$("#about").animate({"margin-top":"-50vh"}, 1000);
-			aboutUp=true;
+			$("#about").show(10);
+		
+			
+				$("#about").animate({"margin-top":"-30px"}, 500);
+				aboutUp=true;
+			
+			
 			
 		 }
 		 else if(aboutUp){
-			 
 			
-		 	$("#about").animate({"margin-top":"100vh"}, 500);
+		 	$("#about").animate({"margin-top":"1000px"}, 500);
 			$("#about").hide(100);
 			aboutUp=false;
 			window.setTimeout("$('#thesisStatement').css('z-index','1')",1000);
-			
 		 }
 		});
 });
