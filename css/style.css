@@ -1,22 +1,24 @@
 @charset "UTF-8";
 /* CSS Document */
-@font-family-base {
-    font-family: FoundersGrotesk;
-    src: local("font/Helvetica Neue Bold"),
-    local("HelveticaNeue-Bold"),
-    url(MgOpenModernaBold.ttf);
-    font-weight: normal;
+
+@font-face {
+    font-family: 'FoundersGrotesk';
+    src: url('../fonts/FoundersGroteskWeb-Regular.woff') format('woff');
+    /*local("HelveticaNeue-Bold"),*/
+    /*url(MgOpenModernaBold.ttf);*/
+    /* font-weight: normal; */
 }
 
 @font-face {
     font-family: 'glyphs';
     src: url("../fonts/Glyph.otf") format("opentype");
 }
-    
+
 body {
-    font-family:Gotham, "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-family: FoundersGrotesk, Gotham, "Helvetica Neue", Helvetica, Arial, sans-serif;
     background-color:#59cbe8;
     font-weight:400;
+	z-index:1;
 }
 
 a {
@@ -24,14 +26,25 @@ a {
     color: white;
 }
 
+.AboutHalf a {
+  color : #59cbe8;
+}
+
+#navi{
+	margin-top:30px;
+}
 
 /* Control weight of statement*/
 #thesisStatement{
 	    font-weight:500;
 }
 
+#mainStatement{
+	height:100%;
+}
 
-/* will turn statement text white*/
+
+/* will turn statement text white */
 #thesisStatement b {
     color:white;
     font-weight:500;
@@ -48,38 +61,38 @@ a {
     float:right;
 }
 
-/* #mainContainer{ */
-/* 	height:100vh; */
-/* 	position:relative; */
-/* } */
 
 #thesisStatement{
-    font-size : 29px;
-    width : 60%;
-    left : 20%;
-    top : 40%;
-    position : absolute;
+    font-size : 30px;
+	z-index:1;
 }
 
 footer{
-    width : 60%;
-    left : 20%;
-    height : 20vh;
-    position : absolute;
+
     top : 100vh;
     padding-bottom : 50px;
 }
+#about {
+background-color : #fff;
+color: black;
+Font-size: 24px;
+margin-top:100vh;
+z-index:9999;
+float:right;
+width:100%;
+z-index:999;
+}
 
-.footerHalf {
+.AboutHalf {
     width:40%;
     position:relative;
-    margin-top:20px;
-    margin-bottom:20px;
+    margin-top:40px;
+    margin-bottom:30px;
     float:left;
     margin-left:5%;
 }
 
-.footerText {
+.AboutText {
     width:100%;
     position:relative;
     margin-top:20px;
@@ -149,7 +162,7 @@ span.project {
 }
 
 .swap{
-	color:white;
+	
 }
 
 .space{
@@ -157,17 +170,52 @@ span.project {
 	position:relative;
 	display:inline-block;
 	font-size:.02em;
-	line-height:1em;
+	line-height:2em;
 	height:1%;
 }
 
 .space p{
-	line-height:1px;
+	line-height:4em;
 	margin:0;
+	z-index:999;
 }
 
 .space h1{
 	font-size:2em;
 	line-height:5px;
 	margin:0;
+}
+
+.closeBox{
+	width:1px;
+	height:1px;
+	background-size:contain;
+	background-color:#937549;
+}
+
+.vcenter{
+
+/* Make it a flex container */
+display: -webkit-box;
+display: -moz-box;
+display: -ms-flexbox;
+display: -webkit-flex;
+display: flex;
+
+/* Align the bootstrap's container vertically */
+-webkit-box-align : center;
+-webkit-align-items : center;
+-moz-box-align : center;
+-ms-flex-align : center;
+align-items : center;
+margin-top:70px;
+}
+
+.specialButton{
+	font-size:3em;
+	margin-left:10px;
+}
+
+.zToggle{
+	z-index:-1;
 }
