@@ -72,6 +72,7 @@
 
     if(!$.zoomooz) {
         $.zoomooz = {};
+		
     }
 
     /* this can be used for setting the default settings for zoomooz explicitly. */
@@ -86,6 +87,7 @@
             var $elem = $(this);
             retValue = setupElementSettings($elem, settings);
         });
+		
         return retValue;
     };
 
@@ -96,6 +98,7 @@
 			
             if(!skipElementSettings) {
                 settings = $this.zoomSettings(settings);
+				
             }
 
             zoomTo($this, settings);
@@ -213,11 +216,14 @@
             var $scroll = $root.parent();
 
             if(elem[0] === $root[0]) {
+				
                 scrollData = getExistingScrollData($root, $scroll);
             } else if(!$root.data("original-scroll")) {
+				
                 startedZoomFromScroll = true;
                 scrollData = storeNewScrollData($root, $scroll, useScrollResetBeforeZoom);
             } else if(!useScrollResetBeforeZoom) {
+				
                 scrollData = getExistingScrollData($root, $scroll);
             }
         }());
@@ -275,6 +281,7 @@
                 }
 
                 if(settings.animationendcallback) {
+					
                     settings.animationendcallback.call(elem[0]);
                 }
             };
@@ -283,10 +290,12 @@
         var animationstartedcallback = null;
         if(useScrollResetBeforeZoom && scrollData && scrollData.animationstartedcallback) {
             animationstartedcallback = scrollData.animationstartedcallback;
+			
         }
 
         if(!startedZoomFromScroll) {
             animScrollData = false;
+			
         }
 
         $(settings.root).animateTransformation(rootTransformation, settings, animScrollData, animationendcallback, animationstartedcallback);

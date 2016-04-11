@@ -13,6 +13,7 @@
 /*jslint sub: true */
 
 (function($) {
+	
     "use strict";
 	
     if(!$.zoomooz) {
@@ -51,6 +52,7 @@
                 };
             } else {
                 settings.animationendcallback = function() {
+					
                     $(".selectedZoomTarget").removeClass("selectedZoomTarget zoomNotClickable");
                     clickTarget.addClass("selectedZoomTarget");
                 };
@@ -88,8 +90,10 @@
             // closeclick not available here...
             if(settings.closeclick && zoomTarget.hasClass("selectedZoomTarget")) {
                 settings.root.click();
+				
             } else {
                 zoomTarget.zoomTo(settings);
+				
             }
             evt.stopPropagation();
         });
@@ -134,6 +138,7 @@
         setupCssStyles();
         // this needs to be after the "$.fn.zoomTarget" has been initialized
         $(".zoomTarget").zoomTarget();
+		
     });
 
 })(jQuery);

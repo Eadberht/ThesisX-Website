@@ -169,7 +169,7 @@ span.project {
 }
 
 .space{
-	width:1.5%;
+	width:100px;
 	position:relative;
 	display:inline-block;
 	font-size:.02em;
