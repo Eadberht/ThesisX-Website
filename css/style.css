@@ -165,29 +165,14 @@ span.project {
 }
 
 .swap{
-	
+	font-weight:900;	
 }
 
-.space{
-	width:100px;
-	position:relative;
-	display:inline-block;
-	font-size:.02em;
-	line-height:2em;
-	height:1%;
+.underline{
+	text-decoration:underline;
 }
 
-.space p{
-	line-height:4em;
-	margin:0;
-	z-index:999;
-}
 
-.space h1{
-	font-size:2em;
-	line-height:5px;
-	margin:0;
-}
 
 .closeBox{
 	width:1px;
@@ -242,6 +227,47 @@ margin-top:70px;
 	font-size:40px;
 }
 
+.space{
+	width:100px;
+	position:relative;
+	display:inline-block;
+	font-size:2px;
+	line-height:2px;
+	height:1%;
+	z-index:9999999;
+	color:black;
+}
+
+.space p{
+	line-height:3px;
+	margin:0;
+	z-index:999;
+}
+
+.space h1{
+	font-size:4px;
+	line-height:5px;
+	margin:0;
+}
+
+.studentPics{
+	width:26px;
+	float:left;
+	margin-right:5px;
+}
+
+.studentText{
+	width:45px;
+	float:left;
+	margin-right:5px;
+}
+
+.studentInfo{
+	vertical-align:text-bottom;
+	width:16px;
+	float:left;
+}
+
 }
 
 @media (max-width:700px) and (min-width:400px) {
@@ -264,3 +290,7 @@ margin-top:70px;
 }
 
 }
+
+
+
+
