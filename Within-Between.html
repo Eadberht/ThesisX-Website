@@ -900,28 +900,41 @@ $(document).ready(function() {
 	var studentNames= ["Michael Zibin Yuan","Moein Shashaei","Craig Roberts","Ryan Schoenherr","Alexis Baran","Corwin Green","Emilia Aragon","Katie Wylie","Andrea Laszlo","Aryn Beitz","Nicole Salamone","Jacqueline Anerella","Xinyi Li","Kiran Puri","Dina Michl","Leonor Kerke","Abbey Roam","Melissa Berman"];
 	var studentQuotes= ["Login for interactive obedience","scoff at this while reflecting on existence","thou ought to","get in the zone","ultimate empathy","there is strength in numbers","Dead world walking","nature inspires","how do you know","The same only different","Shia LaBeouf","wait what","From this angle","you are when you are where you are","adobe will not fork with you","it is natural entropy","two dyslexics walk into a bra","Design pedagogy reloaded"];
 	
+	/*window.setInterval(function(){
+		var rn = Math.floor(Math.random() * 18);
+		if(  $('b').data('clicked') == 'yes') {
+			$("b").removeClass('shake-constant');
+		} else {
+		  $("b").eq(rn).addClass('shake-constant');
+		}		
+	}, 1000);*/
+		
+		
 	$("#about").hide();
 	$(".space").hide();
 	
 	 $("b").hover(function(e) {
-        $(this).addClass('shake-rotate');
+       // $(this).addClass('shake-rotate');
+		//$(this).addClass('underline');
+		
     });
 	
 	
 	
 	 $("b").click(function(evt) {
-		 var index = $(this).children(".space").index();
+		// var index = $(this).children(".space").index();
 		 $(this).removeClass('shake-rotate');
-		 /*document.getElementsByClassName("space")[0].innerHTML='<iframe scrolling="yes" style="width:100px" type="text/html" src="Projects/'+studentNames[0]+'.html" ></iframe>';*/
-		//$(this).children(".space").load('Projects/'+studentNames[1]+'.html'); 
 		$(this).children(".space").show();
-        $(this).children(".space").zoomTo({targetsize:.8, duration:1000, closeclick: true});
+        $(this).children(".space").zoomTo({targetsize:.8, duration:1000});
 		/*$(this).zoomTarget();*/;
-		zoomed=true;
+		//zoomed=true;
+		//$(this).data('clicked',true) 
+		evt.stopPropagation();
     });
 	
 	 $("#mainContainer").click(function(evt) {
        $(".space").hide(200);
+	   $("b").data('clicked',false) 
     });
 	
 	$("#revealAll").click(function(e) {
@@ -986,7 +999,22 @@ $(document).ready(function() {
 					return studentQuotes[i];
       			});
 			}
-	}
+	};
+	
+	function randomShake() {
+		var rn = Math.floor(Math.random() * 18);
+		$("b").addClass('shake-rotate');
+		$("b").addClass('shake-constant');
+		sleep(1000);
+		$("b").removeClass('shake-constant');
+	};
+	
+	function sleep(miliseconds) {
+	   var currentTime = new Date().getTime();
+	
+	   while (currentTime + miliseconds >= new Date().getTime()) {
+	   }
+	};
 
 });
 
