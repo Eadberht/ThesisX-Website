@@ -11,7 +11,7 @@
 
 @font-face {
     font-family: 'glyphs';
-    src: url("../fonts/Glyph.otf") format("opentype");
+    src: url("../fonts/Glyph_003.otf") format("opentype");
 }
 
 body {
@@ -173,7 +173,7 @@ span.project {
 }
 
 .swap{
-	font-weight:900;	
+	font-weight:900;
 }
 
 .underline{
@@ -210,6 +210,9 @@ margin-top:70px;
 .specialButton{
 	font-size:3em;
 	margin-left:10px;
+}
+.specialButton:hover {
+    color : white;
 }
 
 .zToggle{
@@ -290,6 +293,11 @@ margin-top:70px;
 	vertical-align:text-bottom;
 	width:16px;
 	float:left;
+  margin-top : 43px
+}
+
+.pilcrow {
+    font-size : 5px;
 }
 
 }
@@ -314,7 +322,3 @@ margin-top:70px;
 }
 
 }
-
-
-
-
