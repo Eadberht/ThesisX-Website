@@ -46,10 +46,18 @@ a {
 
 
 /* will turn statement text white */
-#thesisStatement b {
+.studentPage {
     color:white;
     font-weight:500;
     font-family : glyphs;
+	display:inline-block;
+}
+
+.studentPage2 {
+    color:white;
+    font-weight:500;
+    font-family : glyphs;
+	display:inline;
 }
 
 #logo{
@@ -207,6 +215,22 @@ margin-top:70px;
 .zToggle{
 	z-index:-1;
 }
+
+#descriptionText{
+	padding:10px;
+	background-color:black;
+	position:absolute;
+	margin-top:20px;
+	margin-left:20px;
+	color:white;
+	z-index:99999;
+	opacity:0;
+	font-size:15px;
+	letter-spacing: 2px;
+	text-transform:uppercase;
+}
+
+
 
 @media (min-width: 992px) {
 
