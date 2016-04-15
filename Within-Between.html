@@ -939,9 +939,8 @@ $(document).ready(function() {
      	var index = $(this).index(".studentPage");
 		if( $(".studentPage").data('clicked')=='close'){
 		$(".studentPage").addClass("shake-chunk");
-		//$(this).addClass('underline');
     	$(".studentName").eq(index).animate({"opacity":"100"},2000);
-		//$(".studentName").eq(index).css('opacity','100');
+		$(".studentName").eq(index).data('on','yes');
 		}
     });
 
@@ -1041,7 +1040,7 @@ $(document).ready(function() {
           return text === studentNames[index] ? studentQuotes[index] : studentNames[index];
       });
 
-<<<<<<< HEAD
+
 	 });*/
 	 
 	 $(".studentName").hover(function(){
