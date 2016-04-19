@@ -263,6 +263,15 @@ margin-top:70px;
 	text-transform:uppercase;
 }
 
+.zoomButton{
+	display:inline;
+}
+
+.nextButton{
+	display:inline;
+	z-index:100;
+}
+
 
 
 @media (min-width: 992px) {
