@@ -114,8 +114,14 @@
 		float: left;
 		margin-right:5px;
 		margin-bottom: 2px;
-		font-size: 135%;
+		font-size: 5px;
 		line-height:1.45;
+	}
+
+	.space .studentText h2 {
+		font-size:5px;
+		line-height:1;
+		font-weight: bold;
 	}
 
 	.studentPics{
