@@ -82,9 +82,12 @@ $(document).ready(function() {
   
   /* Changes cursor to indicate clickable punctuation */
   $(".studentPage").hover(function(e) {
-  
+ 		if($(".studentPage").data('clicked')=='open'){
   	$('.studentPage').css( 'cursor', 'pointer' );
-  
+ 		}
+		if($(".studentPage").data('clicked')=='close'){
+  	$('.studentPage').css( 'cursor', 'pointer' );
+ 		}
   });
   
    /* Reveals the nav button names */
@@ -157,6 +160,8 @@ $(document).ready(function() {
   $(".studentPage").click(function(evt) {
 	  
 	  var index = $(this).children(".space").index(".space");
+	  var qw = window.innerWidth;
+	  var myWin = window;
 	  whosOpen=index;
 	  $(this).removeClass('shake-chunk');
 	  $(this).children(".space").show();
@@ -164,6 +169,9 @@ $(document).ready(function() {
 	  //$("#navi").eq(whosOpen-1).animate({"width":"200px"},2000);
 	  evt.stopPropagation();
 	  $(".studentPage").data('clicked','open');
+	  $("#navi").css('width',qw);
+	  $("#navi").css('margin','');
+	  $("#navi").css('','');
 	  
   });
   
@@ -266,6 +274,13 @@ $(document).ready(function() {
 	  }
   });
   
+  $(window).resize(function() {
+	  if($(".studentPage").data('clicked')=='open'){
+	 	$(".space").eq(whosOpen).zoomTo({targetsize:.8, duration:20});
+	  }
+	});
+
+  
   
   function hideAll() {
   for (i = 0; i < studentNames.length; i++) {
@@ -293,8 +308,8 @@ $(document).ready(function() {
   
   
   $( "#mainContainer").mousemove(function( event ) {
-  $("#descriptionText").css('margin-left',(event.pageX));
-  $("#descriptionText").css('margin-top',(event.pageY-60));
+  $("#descriptionText").css('margin-left',(event.pageX-20));
+  $("#descriptionText").css('margin-top',(event.pageY-140));
   });                                  
 
 });
