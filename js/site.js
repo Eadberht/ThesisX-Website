@@ -36,6 +36,15 @@ $(document).ready(function() {
 		  
 	  }
 	  
+	   if( $(".studentPage").data('clicked')=='open'){
+		  
+		  $(".studentPage").removeClass("shake-chunk");
+		  $(".studentName").eq(index).animate({"opacity":"100"},2000);
+		  $(".studentName").eq(index).data('on','yes');
+		  
+	  }
+	  
+	  
   });
   
   /* Reveals student statements with unique IDs */
@@ -162,6 +171,7 @@ $(document).ready(function() {
 	  var index = $(this).children(".space").index(".space");
 	  var qw = window.innerWidth;
 	  var myWin = window;
+	   var x = $("#about").eq(0).position();
 	  whosOpen=index;
 	  $(this).removeClass('shake-chunk');
 	  $(this).children(".space").show();
@@ -169,9 +179,6 @@ $(document).ready(function() {
 	  //$("#navi").eq(whosOpen-1).animate({"width":"200px"},2000);
 	  evt.stopPropagation();
 	  $(".studentPage").data('clicked','open');
-	  $("#navi").css('width',qw);
-	  $("#navi").css('margin','');
-	  $("#navi").css('','');
 	  
   });
   
