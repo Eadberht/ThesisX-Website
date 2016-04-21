@@ -49,6 +49,10 @@ a:visited{
 	margin-top:30px;
 }
 
+.big-top-pad {
+    margin-top : -1em;
+}
+
 /* Control weight of statement*/
 #thesisStatement{
 	    font-weight:500;
@@ -65,14 +69,23 @@ a:visited{
     color:white;
     font-weight:500;
     font-family : glyphs;
-	display:inline-block;
+    display:inline-block;
+    margin-right : 0.1em;
+}
+
+.studentPage p {
+    font-family : FoundersGrotesk;    
+}
+
+.studentPage h1 {
+    color : white;
 }
 
 .studentPage2 {
     color:white;
     font-weight:500;
     font-family : glyphs;
-	display:inline;
+    display:inline;
 }
 
 #logo{
@@ -105,7 +118,7 @@ font-size: 24px;
 float:right;
 width:100%;
 z-index:999;
-height:88vh;
+/* height:88vh;*/
 margin-top:1000px;
 }
 
@@ -184,7 +197,7 @@ span.project {
 }
 
 .studentName{
-	display:inline;
+    display:inline;
 }
 
 .swap{
@@ -282,7 +295,7 @@ margin-top:70px;
 
 #thesisStatement{
     font-size : 35px;
-	line-height:1.2em;
+    line-height:1.0em;
 }
 
 #aboutClick{
@@ -306,7 +319,8 @@ margin-top:70px;
 
 .space p{
 	line-height:3px;
-	margin:0;
+        margin:0;
+        margin-bottom : 1em;
 	z-index:999;
 }
 
@@ -333,6 +347,11 @@ margin-top:70px;
 	width:16px;
 	float:left;
   margin-top : 43px
+}
+
+.studentInfo b {
+    color : white;
+    font-weight : normal;
 }
 
 .pilcrow {
