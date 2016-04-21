@@ -263,12 +263,13 @@ margin-top:70px;
 }
 
 #descriptionText{
+	border-radius:5px;
 	padding:10px;
-	background-color:black;
+	background-color:white;
 	position:absolute;
 	margin-top:20px;
 	margin-left:20px;
-	color:white;
+	color:black;
 	z-index:999;
 	opacity:0;
 	font-size:15px;
