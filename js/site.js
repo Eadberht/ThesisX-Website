@@ -1,4 +1,6 @@
 $(document).ready(function() {
+	
+	
 	/* Universal Variables */
   var whosOpen=0; /* Keeps track of open student page */
   var zoomed = false; /* ???*/
@@ -159,111 +161,111 @@ $(document).ready(function() {
 	  $(this).removeClass('shake-chunk');
 	  $(this).children(".space").show();
 	  $(this).children(".space").zoomTo({targetsize:.8, duration:1000, closeclick: false});
+	  //$("#navi").eq(whosOpen-1).animate({"width":"200px"},2000);
 	  evt.stopPropagation();
 	  $(".studentPage").data('clicked','open');
 	  
   });
   
   
-  
-  
-  
+  /* Controls the hover box */
   $(document).on("keydown", function (e) {
-  if($(".studentPage").data('clicked')=='open'){
-  if(e.which == 39)
-  {
-  $(".studentPage").removeClass('shake-chunk');
-  $(".space").eq(whosOpen+1).show();
-  $(".space").eq(whosOpen+1).zoomTo({targetsize:.8, duration:2000});
-  $(".studentName").eq(whosOpen+1).animate({"opacity":"100"},2000);
-  $(".studentName").eq(whosOpen+1).data('on','yes');
-  whosOpen=whosOpen+1;
-  
-  }
-  
-  if(e.which == 37)
-  {
-  $(".studentPage").removeClass('shake-chunk');
-  $(".space").eq(whosOpen-1).show();
-  $(".space").eq(whosOpen-1).zoomTo({targetsize:.8, duration:2000});
-  $(".studentName").eq(whosOpen-1).animate({"opacity":"100"},2000);
-  $(".studentName").eq(whosOpen-1).data('on','yes');
-  whosOpen=whosOpen-1;
-  }
-  
-  if(e.which == 27)
-  {
-  $(".space").hide(1000);
-  $(".studentPage").data('clicked','close');
-  $("body").zoomTo({targetsize:1, duration:1000});
-  whosOpen=0;
-  }
-  }
+	  if($(".studentPage").data('clicked')=='open'){
+	  if(e.which == 39)
+	  {
+	  $(".studentPage").removeClass('shake-chunk');
+	  $(".space").eq(whosOpen+1).show();
+	  $(".space").eq(whosOpen+1).zoomTo({targetsize:.8, duration:2000});
+	  $(".studentName").eq(whosOpen+1).animate({"opacity":"100"},2000);
+	  $(".studentName").eq(whosOpen+1).data('on','yes');
+	  whosOpen=whosOpen+1;
+	  
+	  }
+	  
+	  if(e.which == 37)
+	  {
+	  $(".studentPage").removeClass('shake-chunk');
+	  $(".space").eq(whosOpen-1).show();
+	  $(".space").eq(whosOpen-1).zoomTo({targetsize:.8, duration:2000});
+	  $(".studentName").eq(whosOpen-1).animate({"opacity":"100"},2000);
+	  $(".studentName").eq(whosOpen-1).data('on','yes');
+	  whosOpen=whosOpen-1;
+	  }
+	  
+	  if(e.which == 27)
+	  {
+	  $(".space").hide(1000);
+	  $(".studentPage").data('clicked','close');
+	  $("body").zoomTo({targetsize:1, duration:1000});
+	  whosOpen=0;
+	  }
+	  }
   });
   
   
-  
-  
+  /* zooms out to the main page */
   $("#mainContainer").click(function(evt) {
-  $(".space").hide(1000);
-  $(".studentPage").data('clicked','close');
-  $("body").zoomTo({targetsize:1, duration:1000});
+	  $(".space").hide(1000);
+	  $(".studentPage").data('clicked','close');
+	  $("body").zoomTo({targetsize:1, duration:1000});
   });
   
   
   
-  
-  
-  
-  
+  /* changes all the revealed statemetents to names */
   $("#revealAll").click(function(e) {
-  namesShown = !namesShown;
-  for (i = 0; i < studentNames.length; i++) {
-  $(".studentName").eq(i).text(function(a, text){
-  if (namesShown) {
-  $(this).removeClass('swap');
-  return studentQuotes[i];
+	  namesShown = !namesShown;
+	  for (i = 0; i < studentNames.length; i++) {
+		  $(".studentName").eq(i).text(function(a, text){
+			  if (namesShown) {
+			  $(this).removeClass('swap');
+			  return studentQuotes[i];
+		  
+		  } 
+		  else {
+			  $(this).addClass('swap');
+			  return studentNames[i];
+		  }
+		});
+	  }
   
-  } else {
-  $(this).addClass('swap');
-  return studentNames[i];
-  }
   });
-  }
-  
-  });
   
   
   
-  
+  /* Slides up about box & changes Pilcro*/
   $("#aboutClick").click(function(e) {
-  var dWidth = $(window).width();
-  if(!aboutUp){
-  
-  $("#thesisStatement").css("z-index","-1");
-  $("#about").show(10);
-  
-  $("#about").animate({"opacity":"100"}, 200);
-  $("#about").animate({"margin-top":"-30px"}, 500);
-  $("#thesisStatement").animate({"margin-top":"-700px"}, 500);
-  aboutUp=true;
-  
-  $("#aboutClick").html('<div class="navText">Close</div>&para;');
-  
-  
-  }
-  else if(aboutUp){
-  
-  $("#about").animate({"margin-top":"1000px"}, 500);
-  $("#about").animate({"opacity":"0"}, 200);
-  $("#thesisStatement").animate({"margin-top":"0px"}, 500);
-  $("#about").hide(100);
-  aboutUp=false;
-  window.setTimeout("$('#thesisStatement').css('z-index','1')",1000);
-  
-  $("#aboutClick").html('<div class="navText">About</div>&dagger;');
-  }
+	  
+	  var dWidth = $(window).width();
+	  
+	  if(!aboutUp){
+	  
+		  $("#thesisStatement").css("z-index","-1");
+		  $("#about").show(10);
+		  
+		  $("#about").animate({"opacity":"100"}, 10);
+		 // $("#about").animate({"margin-top":"-30px"}, 'fast', );
+		 $("#about").animate( { marginTop: 30 },{ duration: 2000, easing: 'easeOutQuart' });
+		  $("#thesisStatement").animate({"margin-top":"-700px"}, 500);
+		  aboutUp=true;
+		  $("#aboutClick").html('<div class="navText">Close</div>&para;');
+	  
+	  }
+	  
+	  else if(aboutUp){
+	  
+		  $("#about").animate({"margin-top":"1000px"}, 500);
+		  $("#about").animate({"opacity":"0"}, 200);
+		  $("#thesisStatement").animate({"margin-top":"0px"}, 500);
+		  $("#about").hide(100);
+		  aboutUp=false;
+		  window.setTimeout("$('#thesisStatement').css('z-index','1')",1000);
+		  
+		  $("#aboutClick").html('<div class="navText">About</div>&dagger;');
+	  
+	  }
   });
+  
   
   function hideAll() {
   for (i = 0; i < studentNames.length; i++) {
