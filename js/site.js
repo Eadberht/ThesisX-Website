@@ -1,14 +1,10 @@
 $(document).ready(function() {
-<<<<<<< HEAD
+
 	var xs = window.matchMedia( "(min-width: 0) and (max-width: 768px) " );
 	var sm = window.matchMedia( "(min-width: 768px) and (max-width: 992px)  " );
 	var md = window.matchMedia( "(min-width: 992px) and (max-width: 1200px) " );
 	var lg = window.matchMedia( "(min-width: 1200px)" );
 	
-=======
-
-
->>>>>>> origin/master
 	/* Universal Variables */
   var whosOpen=0; /* Keeps track of open student page */
   var zoomed = false; /* ???*/
