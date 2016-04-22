@@ -22,10 +22,7 @@
     src: url("../fonts/Glyph_003.otf") format("opentype");
 }
 
-html{
-	padding:0;
-	overflow: hidden;
-}
+
 
 body {
     font-family: FoundersGrotesk, Gotham, "Helvetica Neue", Helvetica, Arial, sans-serif;
