@@ -187,4 +187,31 @@
 
 @media (min-width: 1200px) {
 
+	#thesisStatement{
+		font-size : 44px;
+		line-height:1.2;
+	}
+    #about .AboutText p {
+		font-size: 22px;
+		line-height:1.2;
+		margin-bottom: 9px;
+		margin-top: 0;
+	}
+    	#about .AboutHalf p {
+		font-size: 22px;
+		line-height:1.2;
+		margin-bottom: 0;
+		margin-top: 0;
+	}
+    
+/*
+    	#aboutClick{
+		font-size:64px;
+	}
+
+    	#revealAll{
+		font-size:64px;
+	}
+*/
+
 }
