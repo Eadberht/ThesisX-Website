@@ -2,16 +2,6 @@
 	margin-right: 10px;
 }
 
-@media only screen 
-  and (min-device-width: 320px) 
-  and (max-device-width: 568px)
-  and (-webkit-min-device-pixel-ratio: 2) {
-	   
-	html{
-		font-size:10px;
-
-	}
-
 @media (max-width: 767px) {
 
 
@@ -19,7 +9,7 @@
 }
 
 
-@media (min-width: 768px) and (max-width: 992px) {
+@media (min-width: 768px) {
 
 	#navi img{
 		width:400px;
@@ -186,11 +176,7 @@
 
 
 
-@media (min-width: 992px) and (max-width: 1200px) {
-	html{
-	padding:0;
-	overflow: hidden;
-	}
+@media (min-width: 992px) {
 
 	#about {
 		position:absolute;
@@ -370,5 +356,4 @@ html{
 	padding:0;
 	overflow: hidden;
 }
-
 }

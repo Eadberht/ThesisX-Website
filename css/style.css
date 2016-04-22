@@ -310,11 +310,14 @@ nav a{
 
 .prevo{
 	display:inline;
+	height:30px;
 }
 
 
 .nexo{
 	display:inline;
+	margin-top:-100px;
+	padding-top:10px;
 }
 #about{
 		position:absolute;

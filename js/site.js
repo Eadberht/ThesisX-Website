@@ -190,7 +190,7 @@ $(document).ready(function() {
 	  whosOpen=index;
 	  $(this).removeClass('shake-chunk');
 	  $(this).children(".space").show();
-	  $(this).children(".space").zoomTo({targetsize:.9, duration:1000, closeclick: false});
+	  $(this).children(".space").zoomTo({targetsize:.8, duration:1000, closeclick: false});
 	  //$("#navi").eq(whosOpen-1).animate({"width":"200px"},2000);
 	  evt.stopPropagation();
 	  $(".studentPage").data('clicked','open');
