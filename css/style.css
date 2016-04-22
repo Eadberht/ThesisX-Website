@@ -22,11 +22,14 @@
     src: url("../fonts/Glyph_003.otf") format("opentype");
 }
 
+
+
 body {
     font-family: FoundersGrotesk, Gotham, "Helvetica Neue", Helvetica, Arial, sans-serif;
     background-color:#59cbe8;
     font-weight:400;
 	z-index:1;
+	padding:0;
 }
 
 a {
@@ -55,6 +58,14 @@ a:visited{
 
 #navi{
 	margin-top:30px;
+}
+
+#aboutClick{
+  float:right;
+}
+
+#revealAll{
+  float:right;
 }
 
 .studentPics .big-top-pad {
@@ -300,9 +311,26 @@ nav a{
 
 .prevo{
 	display:inline;
+	height:30px;
 }
 
 
 .nexo{
 	display:inline;
+	margin-top:-100px;
+	padding-top:10px;
 }
+#about{
+		position:absolute;
+		background-color : #fff;
+		color: black;
+		font-size: 24px;
+		height:200vh;
+		float:right;
+		width:100%;
+		margin-left:-15px;
+		z-index:999;
+		margin-top:1000px;
+	
+	}
+	
