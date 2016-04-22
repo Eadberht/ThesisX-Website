@@ -271,6 +271,33 @@ $(document).ready(function() {
 		  }
 		});
 	  }
+	  
+	    if(!aboutUp){
+	  
+		  $("#thesisStatement").css("z-index","-1");
+		  $("#about").show(10);
+		  
+		  $("#about").animate({"opacity":"100"}, 10);
+		 // $("#about").animate({"margin-top":"-30px"}, 'fast', );
+		 $("#about").animate( { marginTop: 30 },{ duration: 2000, easing: 'easeOutQuart' });
+		  $("#thesisStatement").animate({"margin-top":"-700px"}, 500);
+		  aboutUp=true;
+		  $("#aboutClick").html('<div class="navText">Close</div>&para;');
+	  
+	  }
+	  
+	  else if(aboutUp){
+	  
+		  $("#about").animate({"margin-top":"1000px"}, 500);
+		  $("#about").animate({"opacity":"0"}, 200);
+		  $("#thesisStatement").animate({"margin-top":"0px"}, 500);
+		  $("#about").hide(100);
+		  aboutUp=false;
+		  window.setTimeout("$('#thesisStatement').css('z-index','1')",1000);
+		  
+		  $("#aboutClick").html('<div class="navText">About</div>&dagger;');
+	  
+	  }
   
   });
   
