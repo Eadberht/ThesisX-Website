@@ -327,6 +327,7 @@ nav a{
 	display:inline;
 	margin-top:-100px;
 	padding-top:10px;
+	margin-left:-7px;
 }
 #about{
 		position:absolute;
@@ -343,7 +344,10 @@ nav a{
 	}
 	
 #mainContainer{
-	height:95vh;
+	height:100vh;
 	width:100vw;
+}
 
+.sImg{
+	max-width:400px;
 }

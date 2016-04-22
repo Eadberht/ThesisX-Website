@@ -31,7 +31,7 @@ $(document).ready(function() {
   $("#about").hide();
   $(".space").hide();
   $(".navText").hide();
-  $(".navText").data('open','no')
+  $(".navText").data('open','no');
 
 
 
@@ -104,9 +104,8 @@ $(document).ready(function() {
 
   /* Changes cursor to indicate clickable punctuation */
   $(".studentPage").hover(function(e) {
- 		if($(".studentPage").data('clicked')=='open'){
   	$('.studentPage').css( 'cursor', 'default' );
- 		}
+ 		
 		if($(".studentPage").data('clicked')=='close'){
   	$('.studentPage').css( 'cursor', 'pointer' );
  		}
@@ -189,6 +188,7 @@ $(document).ready(function() {
 	  $(this).removeClass('shake-chunk');
 	  $(this).children(".space").show();
 	  $(this).children(".space").zoomTo({targetsize:.8, duration:1000, closeclick: false});
+	 
 	  //$("#navi").eq(whosOpen-1).animate({"width":"200px"},2000);
 	  evt.stopPropagation();
 	  $(".studentPage").data('clicked','open');
@@ -198,6 +198,8 @@ $(document).ready(function() {
 	 	$("#aboutClick").html('<div class="navText">Close</div>&para;');
 		$(".navText").hide();
 	  	$("#revealAll").hide();
+		 $("#navi").animate({"padding-top":"10px"},500);
+		 $("#navi img").addClass('sImg');
 		}
 	
 	$('.studentPage').css( 'cursor', 'default' );
@@ -258,6 +260,8 @@ $(document).ready(function() {
 	  $(".space").hide(1000);
 	  $(".studentPage").data('clicked','close');
 	  $("#mainContainer").zoomTo({targetsize:1, duration:1000});
+	   $("#navi").animate({"padding-top":"30"},500);
+	   $("#navi img").removeClass('sImg');
 	  whosOpen=0;
 	  }
 	  }
@@ -270,6 +274,8 @@ $(".brand").click(function(evt) {
 	 	$("#aboutClick").html('<div class="navText">About</div>&dagger;');
 		$(".navText").hide();
 	  	$("#revealAll").show();
+		 $("#navi").animate({"padding-top":"30"},500);
+		 $("#navi img").removeClass('sImg');
 });
 
   /* zooms out to the main page */
@@ -277,7 +283,8 @@ $(".brand").click(function(evt) {
 	  $(".space").hide(1000);
 	  $(".studentPage").data('clicked','close');
 	  $(this).zoomTo({targetsize:1, duration:1000});
-	  
+	   $("#navi").animate({"padding-top":"30"},500);
+	   $("#navi img").removeClass('sImg');
 	 	$("#aboutClick").html('<div class="navText">About</div>&dagger;');
 		$(".navText").hide();
 	  	$("#revealAll").show();
@@ -289,7 +296,7 @@ $(".brand").click(function(evt) {
   /* changes all the revealed statemetents to names */
   $("#revealAll").click(function(e) {
 	  namesShown = !namesShown;
-	  for (i = 0; i < studentNames.length; i++) {
+	  for ( var i = 0; i < studentNames.length; i++) {
 		  $(".studentName").eq(i).text(function(a, text){
 			  if (namesShown) {
 			  $(this).removeClass('swap');
@@ -331,8 +338,10 @@ $(".brand").click(function(evt) {
 	  		$(".studentPage").data('clicked','close');
 	 		 $("#mainContainer").zoomTo({targetsize:1, duration:1000});
 	 		$("#aboutClick").html('<div class="navText">About</div>&dagger;');
+			$(".navText").hide();
 	  		$("#revealAll").show();
-	
+	    $("#navi").animate({"padding-top":"30"},500);
+	   $("#navi img").removeClass('sImg');
 		}
 
 	  else if(!aboutUp){
@@ -370,35 +379,9 @@ $(".brand").click(function(evt) {
 	});
 
 
-
-  function hideAll() {
-  for (i = 0; i < studentNames.length; i++) {
-  $(".studentName").eq(i).removeClass('swap');
-  $(".studentName").eq(i).text(function(a, text){
-  return studentQuotes[i];
-  });
-  }
-  };
-
-  function randomShake() {
-  var rn = Math.floor(Math.random() * 18);
-  $(".studentPage").addClass('shake-slow');
-  $(".studentPage").addClass('shake-constant');
-  sleep(1000);
-  $(".studentPage").removeClass('shake-constant');
-  };
-
-  function sleep(miliseconds) {
-  var currentTime = new Date().getTime();
-
-  while (currentTime + miliseconds >= new Date().getTime()) {
-  }
-  };
-
-
   $( "#mainContainer").mousemove(function( event ) {
   $("#descriptionText").css('margin-left',(event.pageX-20));
-  $("#descriptionText").css('margin-top',(event.pageY-140));
+  $("#descriptionText").css('margin-top',(event.pageY-60));
   });
 
 });
