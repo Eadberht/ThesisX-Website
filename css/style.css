@@ -63,6 +63,14 @@ a:visited{
 	margin-top:30px;
 }
 
+#aboutClick{
+  float:right;
+}
+
+#revealAll{
+  float:right;
+}
+
 .studentPics .big-top-pad {
     margin-top : 0em;
 }
