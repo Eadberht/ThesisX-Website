@@ -1,3 +1,7 @@
+#aboutClick{
+	margin-right: 10px;
+}
+
 @media (min-width: 992px) {
 
 	#navi img{
@@ -114,14 +118,17 @@
 		float: left;
 		margin-right:5px;
 		margin-bottom: 2px;
-		font-size: 5px;
+		font-size: 135%;
 		line-height:1.45;
 	}
 
 	.space .studentText h2 {
 		font-size:5px;
+		color:white;
 		line-height:1;
 		font-weight: bold;
+		margin-bottom: 2px;
+		margin-top: 0;
 	}
 
 	.studentPics{
@@ -166,8 +173,6 @@
 	font-size:40px;
 }
 
-#revealAll{
-	font-size:40px;
-}
+
 
 }
