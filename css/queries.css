@@ -68,8 +68,8 @@ and (max-device-width : 1200px)  {
 
 	.space{
 		width:300px;
-		min-height: 500px;
-		max-height: 500px;
+		min-height: 700px;
+		max-height: 700px;
 		position:relative;
 		display:inline-block;
 		font-size:2px;
@@ -167,6 +167,7 @@ and (max-device-width : 1200px)  {
 	.pilcrow {
 		font-size : 5px;
 	}
+	
 
 }
 
