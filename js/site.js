@@ -1,5 +1,8 @@
 $(document).ready(function() {
-	
+	var xs = window.matchMedia( "(min-width: 0) and (max-width: 768px) " );
+	var sm = window.matchMedia( "(min-width: 768px) and (max-width: 992px)  " );
+	var md = window.matchMedia( "(min-width: 992px) and (max-width: 1200px) " );
+	var lg = window.matchMedia( "(min-width: 1200px)" );
 	
 	/* Universal Variables */
   var whosOpen=0; /* Keeps track of open student page */
@@ -15,7 +18,15 @@ $(document).ready(function() {
   $(".studentPage").data('clicked','close');
   $("html").css("opacity","0");
   $("html").animate({"opacity":"100"},16000);
-  $(".studentName").css("opacity","0");
+  
+  if (md.matches) {
+ 	 $(".studentName").css("opacity","0");
+  }
+  
+  else if (lg.matches) {
+ 	 $(".studentName").css("opacity","0");
+  }
+  
   $("#about").hide();
   $(".space").hide();
   $(".navText").hide();
