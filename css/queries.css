@@ -2,6 +2,16 @@
 	margin-right: 10px;
 }
 
+@media (max-width: 767px) {
+
+}
+
+
+@media (min-width: 768px) {
+
+}
+
+
 @media (min-width: 992px) {
 
 	#navi img{
@@ -131,6 +141,11 @@
 		margin-top: 0;
 	}
 
+	.space .studentText h1 {
+		font-family: 'FoundersGrotesk';
+		margin-bottom: 3px;
+	}
+
 	.studentPics{
 		width:40px;
 		float:left;
@@ -158,21 +173,8 @@
 
 }
 
-@media (max-width:700px) and (min-width:400px) {
-
-#navi img{
-	width:300px;
-}
-
-#thesisStatement{
-    font-size : 25px;
-	line-height:1.2em;
-}
-
-#aboutClick{
-	font-size:40px;
-}
 
 
+@media (min-width: 1200px) {
 
 }
