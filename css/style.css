@@ -10,18 +10,44 @@
 }
 
 @font-face {
-    font-family: 'glyphs';
-    src: url("../fonts/Glyph.otf") format("opentype");
+    font-family: 'FoundersGrotesk';
+    src: url('../fonts/FoundersGroteskWeb-Semibold.woff') format('woff');
+    /*local("HelveticaNeue-Bold"),*/
+    /*url(MgOpenModernaBold.ttf);*/
+    font-weight: bold;
 }
+
+@font-face {
+    font-family: 'glyphs';
+    src: url("../fonts/Glyph_003.otf") format("opentype");
+}
+
+
 
 body {
     font-family: FoundersGrotesk, Gotham, "Helvetica Neue", Helvetica, Arial, sans-serif;
     background-color:#59cbe8;
     font-weight:400;
 	z-index:1;
+	padding:0;
 }
 
 a {
+    text-decoration:none;
+    color: white;
+}
+
+a:link {
+    text-decoration:none;
+    color: white;
+}
+
+a:active{
+    text-decoration:none;
+    color: white;
+}
+
+a:visited{
     text-decoration:none;
     color: white;
 }
@@ -32,6 +58,22 @@ a {
 
 #navi{
 	margin-top:30px;
+}
+
+#aboutClick{
+  float:right;
+}
+
+#revealAll{
+  float:right;
+}
+
+.studentPics .big-top-pad {
+    margin-top : 0em;
+}
+
+.studentPics .top-pad {
+    margin-top : 1em;
 }
 
 /* Control weight of statement*/
@@ -46,10 +88,27 @@ a {
 
 
 /* will turn statement text white */
-#thesisStatement b {
+.studentPage {
     color:white;
     font-weight:500;
     font-family : glyphs;
+    display:inline-block;
+    margin-right : 0.1em;
+}
+
+.studentPage p {
+    font-family : FoundersGrotesk;
+}
+
+.studentPage h1 {
+    color : white;
+}
+
+.studentPage2 {
+    color:white;
+    font-weight:500;
+    font-family : glyphs;
+    display:inline;
 }
 
 #logo{
@@ -74,34 +133,23 @@ footer{
     padding-bottom : 50px;
 }
 
-#about {
-position:absolute;
-background-color : #fff;
-color: black;
-font-size: 24px;
-float:right;
-width:100%;
-z-index:999;
-height:88vh;
-margin-top:1000px;
+#about .title{
+  margin-top:30px;
 }
 
-.AboutHalf {
-    width:40%;
+#about .AboutHalf {
     position:relative;
-    margin-top:40px;
-    margin-bottom:30px;
+    margin-top:10px;
+    margin-bottom: 100px;
     float:left;
     margin-left:5%;
 }
 
-.AboutText {
-    width:100%;
+#about .AboutText {
     position:relative;
-    margin-top:20px;
-    margin-bottom:20px;
+    margin-top:30px;
+    margin-bottom: 100px;
     float:left;
-    padding-bottom:50px;
 }
 
 #thesisStatement a {
@@ -127,7 +175,8 @@ span.project {
 }
 
 .brand {
-    width : 300px;
+/*    width : 300px;*/
+    padding-left: 28px;
 }
 
 #project1{
@@ -161,33 +210,18 @@ span.project {
 }
 
 .studentName{
-	display:inline;
+    display:inline;
 }
 
 .swap{
-	
+	font-weight:normal;
 }
 
-.space{
-	width:100px;
-	position:relative;
-	display:inline-block;
-	font-size:.02em;
-	line-height:2em;
-	height:1%;
+.underline{
+	text-decoration:line-through;
 }
 
-.space p{
-	line-height:4em;
-	margin:0;
-	z-index:999;
-}
 
-.space h1{
-	font-size:2em;
-	line-height:5px;
-	margin:0;
-}
 
 .closeBox{
 	width:1px;
@@ -217,50 +251,86 @@ margin-top:70px;
 .specialButton{
 	font-size:3em;
 	margin-left:10px;
+	z-index:999999999;
+	display:inline;
 }
+
+.specialButton:hover {
+    color : white;
+}
+
+.navText{
+	font-size:20px;
+	display:inline;
+	float:right;
+	position:relative;
+	color:white;
+	margin-left:10px;
+	margin-right:10px;
+	margin-top:10px;
+}
+
 
 .zToggle{
 	z-index:-1;
 }
 
-@media (min-width: 992px) {
-
-#navi img{
-	width:400px;
+#descriptionText{
+	border-radius:5px;
+	padding:8px;
+	padding-top:5px;
+	padding-bottom:5px;
+	background-color:white;
+	position:absolute;
+	margin-top:20px;
+	margin-left:20px;
+	color:black;
+	z-index:999;
+	opacity:0;
+	font-size:15px;
+	letter-spacing: 0px;
 }
 
-#thesisStatement{
-    font-size : 35px;
-	line-height:1.2em;
+.zoomButton{
+	display:inline;
 }
 
-#aboutClick{
-	font-size:40px;
+.nextButton{
+	display:inline;
+	z-index:100;
 }
 
-#revealAll{
-	font-size:40px;
+nav{
+	font-family:"glyphs";
+	font-size:14px;
 }
 
+nav a{
+	margin-left:30px;
 }
 
-@media (max-width:700px) and (min-width:400px) {
-
-#navi img{
-	width:300px;
+.prevo{
+	display:inline;
+	height:30px;
 }
 
-#thesisStatement{
-    font-size : 25px;
-	line-height:1.2em;
-}
 
-#aboutClick{
-	font-size:40px;
+.nexo{
+	display:inline;
+	margin-top:-100px;
+	padding-top:10px;
 }
-
-#revealAll{
-	font-size:40px;
-}
-
-}
+#about{
+		position:absolute;
+		background-color : #fff;
+		color: black;
+		font-size: 24px;
+		height:200vh;
+		float:right;
+		width:100%;
+		margin-left:-15px;
+		z-index:999;
+		margin-top:1000px;
+	
+	}
+	
