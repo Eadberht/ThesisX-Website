@@ -13,7 +13,17 @@
 
 
 @media (min-width: 992px) {
-
+	
+	#about {
+		position:absolute;
+		background-color : #fff;
+		color: black;
+		font-size: 24px;
+		float:right;
+		width:100%;
+		z-index:999;
+		margin-top:1000px;
+	}
 	#navi img{
 		width:400px;
 	}
