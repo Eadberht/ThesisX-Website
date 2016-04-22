@@ -172,6 +172,9 @@ $(document).ready(function() {
 	  var qw = window.innerWidth;
 	  var myWin = window;
 	   var x = $("#about").eq(0).position();
+	
+	   
+	   //if( $(".studentPage").data('clicked') == 'close'){
 	  whosOpen=index;
 	  $(this).removeClass('shake-chunk');
 	  $(this).children(".space").show();
@@ -179,7 +182,32 @@ $(document).ready(function() {
 	  //$("#navi").eq(whosOpen-1).animate({"width":"200px"},2000);
 	  evt.stopPropagation();
 	  $(".studentPage").data('clicked','open');
+	   //}
 	  
+  });
+  
+   $(".prevo").click(function(evt) {
+	   if( $(".studentPage").data('clicked') == 'open'){
+	  event.stopPropagation();
+	  $(".studentPage").removeClass('shake-chunk');
+	  $(".space").eq(whosOpen-1).show();
+	  $(".space").eq(whosOpen-1).zoomTo({targetsize:.8, duration:2000});
+	  $(".studentName").eq(whosOpen-1).animate({"opacity":"100"},2000);
+	  $(".studentName").eq(whosOpen-1).data('on','yes');
+	  whosOpen=whosOpen-1;  
+	   }
+  });
+  
+     $(".nexo").click(function(evt) {
+	   if( $(".studentPage").data('clicked') == 'open'){
+	  event.stopPropagation();
+	  $(".studentPage").removeClass('shake-chunk');
+	  $(".space").eq(whosOpen+1).show();
+	  $(".space").eq(whosOpen+1).zoomTo({targetsize:.8, duration:2000});
+	  $(".studentName").eq(whosOpen+1).animate({"opacity":"100"},2000);
+	  $(".studentName").eq(whosOpen+1).data('on','yes');
+	  whosOpen=whosOpen+1;  
+	   }
   });
   
   
