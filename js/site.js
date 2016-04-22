@@ -1,5 +1,5 @@
 $(document).ready(function() {
-
+	$.zoomooz.setup({root:$("#mainContainer"),targetsize:1});
 	var xs = window.matchMedia( "(min-width: 0) and (max-width: 768px) " );
 	var sm = window.matchMedia( "(min-width: 768px) and (max-width: 992px)  " );
 	var md = window.matchMedia( "(min-width: 992px) and (max-width: 1200px) " );
@@ -32,6 +32,7 @@ $(document).ready(function() {
   $(".space").hide();
   $(".navText").hide();
   $(".navText").data('open','no')
+
 
 
 /* ============= Hover Functions ============= */
@@ -104,7 +105,7 @@ $(document).ready(function() {
   /* Changes cursor to indicate clickable punctuation */
   $(".studentPage").hover(function(e) {
  		if($(".studentPage").data('clicked')=='open'){
-  	$('.studentPage').css( 'cursor', 'pointer' );
+  	$('.studentPage').css( 'cursor', 'default' );
  		}
 		if($(".studentPage").data('clicked')=='close'){
   	$('.studentPage').css( 'cursor', 'pointer' );
@@ -181,11 +182,8 @@ $(document).ready(function() {
   $(".studentPage").click(function(evt) {
 
 	  var index = $(this).children(".space").index(".space");
-	  var qw = window.innerWidth;
-	  var myWin = window;
-	   var x = $("#about").eq(0).position();
 
-
+		
 	   //if( $(".studentPage").data('clicked') == 'close'){
 	  whosOpen=index;
 	  $(this).removeClass('shake-chunk');
@@ -195,7 +193,15 @@ $(document).ready(function() {
 	  evt.stopPropagation();
 	  $(".studentPage").data('clicked','open');
 	   //}
-
+	   
+	   if($(".studentPage").data('clicked')=='open'){
+	 	$("#aboutClick").html('<div class="navText">Close</div>&para;');
+		$(".navText").hide();
+	  	$("#revealAll").hide();
+		}
+	
+	$('.studentPage').css( 'cursor', 'default' );
+	
   });
 
    $(".prevo").click(function(evt) {
@@ -251,18 +257,29 @@ $(document).ready(function() {
 	  {
 	  $(".space").hide(1000);
 	  $(".studentPage").data('clicked','close');
-	  $("body").zoomTo({targetsize:1, duration:1000});
+	  $("#mainContainer").zoomTo({targetsize:1, duration:1000});
 	  whosOpen=0;
 	  }
 	  }
   });
 
+$(".brand").click(function(evt) {
+	 $(".space").hide(1000);
+	  $(".studentPage").data('clicked','close');
+	  $("#mainContainer").zoomTo({targetsize:1, duration:1000});
+	 	$("#aboutClick").html('<div class="navText">About</div>&dagger;');
+		$(".navText").hide();
+	  	$("#revealAll").show();
+});
 
   /* zooms out to the main page */
   $("#mainContainer").click(function(evt) {
 	  $(".space").hide(1000);
 	  $(".studentPage").data('clicked','close');
-	  $("body").zoomTo({targetsize:1, duration:1000});
+	  $(this).zoomTo({targetsize:1, duration:1000});
+	 	$("#aboutClick").html('<div class="navText">About</div>&dagger;');
+	  	$("#revealAll").show();
+		
   });
 
 
@@ -306,15 +323,24 @@ $(document).ready(function() {
   $("#aboutClick").click(function(e) {
 
 	  var dWidth = $(window).width();
+	  
+	    if($(".studentPage").data('clicked')=='open'){
+			 $(".space").hide(1000);
+	  		$(".studentPage").data('clicked','close');
+	 		 $("#mainContainer").zoomTo({targetsize:1, duration:1000});
+	 		$("#aboutClick").html('<div class="navText">About</div>&dagger;');
+	  		$("#revealAll").show();
+	
+		}
 
-	  if(!aboutUp){
+	  else if(!aboutUp){
 
 		  $("#thesisStatement").css("z-index","-1");
 		  $("#about").show(10);
 
 		  $("#about").animate({"opacity":"100"}, 10);
-		 // $("#about").animate({"margin-top":"-30px"}, 'fast', );
-		 $("#about").animate( { marginTop: 30 },{ duration: 2000, easing: 'easeOutQuart' });
+		 // $("#about").animate({"margin-top":"-300px"}, 'fast', );
+		 $("#about").animate( { marginTop: 60 },{ duration: 2000, easing: 'easeOutQuart' });
 		  $("#thesisStatement").animate({"margin-top":"-700px"}, 500);
 		  aboutUp=true;
 		  $("#aboutClick").html('<div class="navText">Close</div>&para;');
@@ -325,7 +351,7 @@ $(document).ready(function() {
 
 		  $("#about").animate({"margin-top":"1000px"}, 500);
 		  $("#about").animate({"opacity":"0"}, 200);
-		  $("#thesisStatement").animate({"margin-top":"0px"}, 500);
+		  $("#thesisStatement").animate({"margin-top":"100px"}, 500);
 		  $("#about").hide(100);
 		  aboutUp=false;
 		  window.setTimeout("$('#thesisStatement').css('z-index','1')",1000);
