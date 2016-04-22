@@ -277,7 +277,9 @@ $(".brand").click(function(evt) {
 	  $(".space").hide(1000);
 	  $(".studentPage").data('clicked','close');
 	  $(this).zoomTo({targetsize:1, duration:1000});
+	  
 	 	$("#aboutClick").html('<div class="navText">About</div>&dagger;');
+		$(".navText").hide();
 	  	$("#revealAll").show();
 		
   });
