@@ -4,6 +4,8 @@
 
 @media (max-width: 767px) {
 
+
+
 }
 
 
@@ -24,7 +26,7 @@
 
 	#revealAll{
 		font-size: 35px;
-}
+	}
 
 	#about h2 {
 		font-size: 30px;
@@ -185,16 +187,21 @@
 		z-index:999;
 		margin-top:1000px;
 	}
+
 	#navi img{
 		width:400px;
 	}
 
 	#thesisStatement{
 		font-size : 35px;
-		line-height:1.0em;
+		line-height:1.2;
 	}
 
 	#aboutClick{
+		font-size:40px;
+	}
+
+	#revealAll{
 		font-size:40px;
 	}
 
@@ -237,9 +244,6 @@
 		color: black;
 	}
 
-	#revealAll{
-		font-size:40px;
-	}
 
 	.space{
 		width:135px;
@@ -280,7 +284,7 @@
 
 	.space .studentInfo h2 {
 		color: white;
-		font-weight: regular;
+		font-weight: normal;
 		font-size: 115%;
 		line-height:1.5;
 		margin-top: 2px;
