@@ -3,7 +3,7 @@
 }
 
 
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 767px) {
 
 	#navi img{
 		width:200px;
@@ -319,43 +319,57 @@
 }
 
 
-@media screen and (min-width: 1440px) {
+@media screen and (min-width: 993px) and (max-width: 1200px) {
 
+#navi img{
+		width:400px;
+	}
 
 	#thesisStatement{
-		font-size : 35px;
+		font-size : 29px;
 		line-height:1.2;
 	}
-    #about .AboutText p {
+
+	#aboutClick{
+		font-size:29px;
+	}
+
+	#revealAll{
+		font-size: 29px;
+	}
+
+	#about h2 {
 		font-size: 26px;
-		line-height:1.2;
-		margin-bottom: 18px;
+		line-height: 30px;
+		font-weight: bold;
+		margin-bottom: 0px;
 		margin-top: 0;
 	}
 
-    #about .AboutHalf p {
+	#about h4 {
 		font-size: 26px;
-		line-height:1.2;
-		margin-bottom: 0;
-		margin-top: 0;
-	}
-    #about h2 {
-		font-size: 34px;
-		line-height: 35px;
+		line-height: 30px;
 		font-weight: bold;
-		margin-bottom: 0;
-		margin-top: 0;
-	}
-    #about h4 {
-		font-size: 34px;
-		line-height: 35px;
-		font-weight: bold;
-/*		margin-bottom: -5px;*/
+		margin-bottom: -7px;
 		margin-top: 0;
 	}
 
-    #about h3 {
-		font-size:24px;
+	#about .AboutText p {
+		font-size: 16px;
+		line-height:1.3;
+		margin-bottom: 9px;
+		margin-top: 0;
+	}
+
+	#about .AboutHalf p {
+		font-size: 16px;
+		line-height:1.3;
+		margin-bottom: 0;
+		margin-top: 0;
+	}
+
+	#about h3 {
+		font-size:19px;
 		line-height:1.3;
 		font-weight: bold;
 		margin-bottom:2px;
@@ -363,95 +377,81 @@
 		color: black;
 	}
 
-
-	#navi img{
-		width:550px;
-	}
-
-.space{
-		width:135px;
+	.space{
+		width:200px;
 		min-height: 120px;
 		max-height: 120px;
 		position:relative;
 		display:inline-block;
-		font-size:2px;
-		line-height:2px;
 		z-index:9999999;
-		color:black;
 	}
 
 	.space p{
-		font-size: 5px;
-		line-height:3px;
-			margin:0;
-			margin-bottom : 1em;
+		margin:0;
 		z-index:999;
 	}
 
 	.space h1{
-		font-size:9px;
-		line-height:1.2;
-		font-weight: bold;
 		margin:0;
 	}
 
+	.space h2{
+		margin:0;
+	}
 
-	.space .studentInfo h1{
-		font-size:7px;
+	.space .studentText h1 {
+		font-size:6px;
 		line-height:1;
 		font-weight: bold;
 		margin-bottom:2px;
-		color: black;
+		color: white;
+	}
+
+	.space .studentInfo h1{
+		font-size:6px;
+		line-height:1;
+		font-weight: bold;
+		margin-bottom:2px;
+		color: white;
 	}
 
 	.space .studentInfo h2 {
 		color: white;
-		font-weight: regular;
-		font-size: 125%;
-		line-height:1.6;
-		margin-top: 2px;
-		margin-bottom: -1px;
-	}
-
-	.space .studentInfo p{
-		font-size: 135%;
+		font-weight: normal;
+		font-size: 4px;
 		line-height:1.3;
-		margin-top:0em;
-		margin-bottom: 0em;
-		z-index:999;
+		margin-bottom: 0px;
 	}
 
 	.space .studentText p {
+		font-size: .13em;
+		line-height:1.3;
 		float: left;
 		margin-right:5px;
-		margin-bottom: 2px;
-		font-size: 155%;
-		line-height:1.2;
-	}
-
-	.space .studentText h2 {
-		font-size:5px;
-		color:white;
-		line-height:1;
-		font-weight: bold;
-		margin-bottom: 2px;
-		margin-top: 0;
-	}
-
-	.space .studentText h1 {
-		font-family: 'FoundersGrotesk';
 		margin-bottom: 3px;
+		color: black;
+	}
+
+	.space .studentInfo p {
+		font-size: .13em;
+		line-height:1.3;
+		float: left;
+		margin-top:1px;
+		margin-bottom:2px;
+		z-index:999;
+		color: black;
 	}
 
 	.studentPics{
-		width:40px;
+		width:55px;
 		float:left;
 		margin-right:5px;
 		margin-top: 0;
+
 	}
 
 	.studentText{
-		width:60px;
+		width:100px;
 		float:left;
 		margin-right:5px;
 	}
@@ -463,9 +463,313 @@
 	  margin-top : 43px
 	}
 
-html{
-	padding:0;
-	overflow: hidden;
+	html{
+		overflow:hidden;
+	}
 }
+
+@media screen and (min-width: 1201px) and (max-width: 1439px) {
+
+
+	#navi img{
+		width:400px;
+	}
+
+	#thesisStatement{
+		font-size : 36px;
+		line-height:1.2;
+	}
+
+	#aboutClick{
+		font-size:29px;
+	}
+
+	#revealAll{
+		font-size: 29px;
+	}
+
+	#about h2 {
+		font-size: 28px;
+		line-height: 32px;
+		font-weight: bold;
+		margin-bottom: 0px;
+		margin-top: 0;
+	}
+
+	#about h4 {
+		font-size: 28px;
+		line-height: 32px;
+		font-weight: bold;
+		margin-bottom: -7px;
+		margin-top: 0;
+	}
+
+	#about .AboutText p {
+		font-size: 18px;
+		line-height:1.3;
+		margin-bottom: 9px;
+		margin-top: 0;
+	}
+
+	#about .AboutHalf p {
+		font-size: 18px;
+		line-height:1.3;
+		margin-bottom: 0;
+		margin-top: 0;
+	}
+
+	#about h3 {
+		font-size:21px;
+		line-height:1.3;
+		font-weight: bold;
+		margin-bottom:2px;
+		margin-top: 14px;
+		color: black;
+	}
+
+	.space{
+		width:200px;
+		min-height: 100px;
+		max-height: 100px;
+		position:relative;
+		display:inline-block;
+		z-index:9999999;
+	}
+
+	.space p{
+		margin:0;
+		z-index:999;
+	}
+
+	.space h1{
+		margin:0;
+	}
+
+	.space h2{
+		margin:0;
+	}
+
+	.space .studentText h1 {
+		font-size:5px;
+		line-height:1;
+		font-weight: bold;
+		margin-bottom:2px;
+		color: white;
+	}
+
+	.space .studentInfo h1{
+		font-size:5px;
+		line-height:1;
+		font-weight: bold;
+		margin-bottom:2px;
+		color: white;
+	}
+
+	.space .studentInfo h2 {
+		color: white;
+		font-weight: normal;
+		font-size: 3px;
+		line-height:1.3;
+		margin-bottom: 0px;
+	}
+
+	.space .studentText p {
+		font-size: .09em;
+		line-height:1.3;
+		float: left;
+		margin-right:5px;
+		margin-bottom: 3px;
+		color: black;
+	}
+
+	.space .studentInfo p {
+		font-size: 3px;
+		line-height:1.3;
+		float: left;
+		margin-top:1px;
+		margin-bottom:2px;
+		z-index:999;
+		color: black;
+	}
+
+	.studentPics{
+		width:45px;
+		float:left;
+		margin-right:5px;
+		margin-top: 0;
+
+	}
+
+	.studentText{
+		width:100px;
+		float:left;
+		margin-right:5px;
+	}
+
+	.studentInfo{
+		vertical-align:text-bottom;
+		width:25px;
+		float:left;
+	  margin-top : 43px
+	}
+
+	html{
+		overflow:hidden;
+	}
+
+}
+
+
+@media screen and (min-width: 1440px) {
+
+	#navi img{
+		width:400px;
+	}
+
+	#navText {
+		font-size:36px;
+	}
+
+	#thesisStatement{
+		font-size : 36px;
+		line-height:1.2;
+	}
+
+	#aboutClick{
+		font-size:36px;
+	}
+
+	#revealAll{
+		font-size: 36px;
+	}
+
+	#about h2 {
+		font-size: 28px;
+		line-height: 32px;
+		font-weight: bold;
+		margin-bottom: 0px;
+		margin-top: 0;
+	}
+
+	#about h4 {
+		font-size: 28px;
+		line-height: 32px;
+		font-weight: bold;
+		margin-bottom: -7px;
+		margin-top: 0;
+	}
+
+	#about .AboutText p {
+		font-size: 20px;
+		line-height:1.3;
+		margin-bottom: 9px;
+		margin-top: 0;
+	}
+
+	#about .AboutHalf p {
+		font-size: 17px;
+		line-height:1.3;
+		margin-bottom: 0;
+		margin-top: 0;
+	}
+
+	#about h3 {
+		font-size:20px;
+		line-height:1.3;
+		font-weight: bold;
+		margin-bottom:4px;
+		margin-top: 14px;
+		color: black;
+	}
+
+	.space{
+		width:200px;
+		min-height: 100px;
+		max-height: 100px;
+		position:relative;
+		display:inline-block;
+		z-index:9999999;
+	}
+
+	.space p{
+		margin:0;
+		z-index:999;
+	}
+
+	.space h1{
+		margin:0;
+	}
+
+	.space h2{
+		margin:0;
+	}
+
+	.space .studentText h1 {
+		font-size:5px;
+		line-height:1;
+		font-weight: bold;
+		margin-bottom:2px;
+		color: white;
+	}
+
+	.space .studentInfo h1{
+		font-size:5px;
+		line-height:1;
+		font-weight: bold;
+		margin-bottom:2px;
+		color: white;
+	}
+
+	.space .studentInfo h2 {
+		color: white;
+		font-weight: normal;
+		font-size: 3px;
+		line-height:1.3;
+		margin-bottom: 0px;
+	}
+
+	.space .studentText p {
+		font-size: .09em;
+		line-height:1.3;
+		float: left;
+		margin-right:5px;
+		margin-bottom: 3px;
+		color: black;
+	}
+
+	.space .studentInfo p {
+		font-size: 3px;
+		line-height:1.3;
+		float: left;
+		margin-top:1px;
+		margin-bottom:2px;
+		z-index:999;
+		color: black;
+	}
+
+	.studentPics{
+		width:45px;
+		float:left;
+		margin-right:5px;
+		margin-top: 0;
+
+	}
+
+	.studentText{
+		width:100px;
+		float:left;
+		margin-right:5px;
+	}
+
+	.studentInfo{
+		vertical-align:text-bottom;
+		width:25px;
+		float:left;
+	  margin-top : 43px
+	}
+
+	html{
+		overflow:hidden;
+	}
 
 }
