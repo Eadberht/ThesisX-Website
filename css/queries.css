@@ -13,60 +13,66 @@
 		height: 70px;
 	}
 
+	#navText {
+		font-size:19px;
+	}
+
 	#thesisStatement{
-		font-size : 18px;
+		font-size : 19px;
 		line-height:1.2;
+		margin-top: 20px;
 	}
 
 	#aboutClick{
-		font-size:18px;
+		font-size:19px;
 	}
 
 	#revealAll{
-		font-size: 18px;
+		font-size: 19px;
 	}
 
+
 	#about h2 {
-		font-size: 30px;
-		line-height: 35px;
+		font-size: 20px;
+		line-height: 26px;
 		font-weight: bold;
 		margin-bottom: 0;
 		margin-top: 0;
 	}
 
 	#about h4 {
-		font-size: 30px;
-		line-height: 35px;
+		font-size: 20px;
+		line-height: 26px;
 		font-weight: bold;
-		margin-bottom: -7px;
+		margin-bottom: -4px;
 		margin-top: 0;
 	}
 
 	#about .AboutText p {
-		font-size: 19px;
+		font-size: 14px;
 		line-height:1.3;
 		margin-bottom: 9px;
 		margin-top: 0;
 	}
 
 	#about .AboutHalf p {
-		font-size: 19px;
+		font-size: 14px;
 		line-height:1.3;
 		margin-bottom: 0;
 		margin-top: 0;
 	}
 
 	#about h3 {
-		font-size:24px;
+		font-size:17px;
 		line-height:1.3;
 		font-weight: bold;
 		margin-bottom:2px;
-		margin-top: 14px;
+		margin-top: 5px;
 		color: black;
 	}
 
-	#revealAll{
-		font-size:32px;
+	.prevo {
+		margin-right: 0px;
 	}
 
 	.space{
@@ -93,40 +99,42 @@
 	}
 
 	.space .studentText h1 {
-		font-size:5px;
+		font-size:19px;
 		line-height:1;
 		font-weight: bold;
 		margin-bottom:2px;
+		margin-top: 30px;
 		color: white;
 	}
 
 	.space .studentInfo h1{
-		font-size:5px;
+		font-size:19px;
 		line-height:1;
 		font-weight: bold;
 		margin-bottom:2px;
+		margin-top: -15px;
 		color: white;
+	}
+
+	.space .studentText p {
+		font-size: 15px;
+		line-height:1.3;
+		float: left;
+		margin-right:5px;
+		margin-bottom: 9px;
+		color: black;
 	}
 
 	.space .studentInfo h2 {
 		color: white;
 		font-weight: normal;
-		font-size: 3px;
+		font-size: 15px;
 		line-height:1.3;
 		margin-bottom: 0px;
 	}
 
-	.space .studentText p {
-		font-size: 3px;
-		line-height:1.3;
-		float: left;
-		margin-right:5px;
-		margin-bottom: 3px;
-		color: black;
-	}
-
 	.space .studentInfo p {
-		font-size: 3px;
+		font-size: 15px;
 		line-height:1.3;
 		float: left;
 		margin-top:1px;
@@ -164,6 +172,10 @@
 
 	#navi img{
 		width:400px;
+	}
+
+	#navText {
+		font-size:29px;
 	}
 
 	#thesisStatement{
@@ -219,7 +231,7 @@
 	}
 
 	.space{
-		width:135px;
+		width:150px;
 		min-height: 120px;
 		max-height: 120px;
 		position:relative;
@@ -259,13 +271,13 @@
 	.space .studentInfo h2 {
 		color: white;
 		font-weight: normal;
-		font-size: 3px;
+		font-size: .11em;
 		line-height:1.3;
 		margin-bottom: 0px;
 	}
 
 	.space .studentText p {
-		font-size: 3px;
+		font-size: .11em;
 		line-height:1.3;
 		float: left;
 		margin-right:5px;
@@ -274,11 +286,11 @@
 	}
 
 	.space .studentInfo p {
-		font-size: 3px;
+		font-size: .11em;
 		line-height:1.3;
 		float: left;
-		margin-top:1px;
-		margin-bottom:2px;
+		margin-top:0px;
+		margin-bottom:3px;
 		z-index:999;
 		color: black;
 	}
@@ -292,7 +304,7 @@
 	}
 
 	.studentText{
-		width:60px;
+		width:75px;
 		float:left;
 		margin-right:5px;
 	}
