@@ -290,6 +290,31 @@ $(".brand").click(function(evt) {
 	  	$("#revealAll").show();
 		
   });
+  
+  /* ============= Swipe Events ============= */
+$("#thesisStatement").swipeLeft( {
+         $(".studentPage").removeClass('shake-chunk');
+	  $(".space").eq(whosOpen+1).show();
+	  $(".space").eq(whosOpen+1).zoomTo({targetsize:.8, duration:2000});
+	  $(".studentName").eq(whosOpen+1).animate({"opacity":"100"},2000);
+	  $(".studentName").eq(whosOpen+1).data('on','yes');
+	  whosOpen=whosOpen+1;
+        },
+        //Default is 75px, set to 0 for demo so any distance triggers swipe
+         threshold:30px;
+      });
+
+$("#thesisStatement").swipeRight( {
+        $(".studentPage").removeClass('shake-chunk');
+	  $(".space").eq(whosOpen-1).show();
+	  $(".space").eq(whosOpen-1).zoomTo({targetsize:.8, duration:2000});
+	  $(".studentName").eq(whosOpen-1).animate({"opacity":"100"},2000);
+	  $(".studentName").eq(whosOpen-1).data('on','yes');
+	  whosOpen=whosOpen-1;
+        },
+        //Default is 75px, set to 0 for demo so any distance triggers swipe
+         threshold:30px;
+      });
 
 
 

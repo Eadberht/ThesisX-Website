@@ -91,6 +91,8 @@ a:visited{
 
 /* will turn statement text white */
 .studentPage {
+	/*background-color:black;*/
+	padding-top:10px;
     color:white;
     font-weight:500;
     font-family : glyphs;
@@ -310,6 +312,7 @@ nav{
 	float:left;
 	width:100%;
 	position:absolute;
+	padding-right:40px;
 
 }
 
@@ -320,6 +323,7 @@ nav a{
 .prevo{
 	display:inline;
 	height:30px;
+		margin-right:-6px;
 }
 
 
@@ -327,7 +331,6 @@ nav a{
 	display:inline;
 	margin-top:-100px;
 	padding-top:10px;
-	margin-left:0px;
 }
 #about{
 		position:absolute;
