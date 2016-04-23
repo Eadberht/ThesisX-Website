@@ -500,13 +500,15 @@
 		font-size : 38px;
 		line-height:1.2;
 	}
-    #about .AboutText p {
+    
+	#about .AboutText p {
 		font-size: 22px;
 		line-height:1.2;
 		margin-bottom: 9px;
 		margin-top: 0;
 	}
-    	#about .AboutHalf p {
+    
+	#about .AboutHalf p {
 		font-size: 22px;
 		line-height:1.2;
 		margin-bottom: 0;
@@ -516,7 +518,8 @@
 	#navi img{
 		width:500px;
 	}
-.space{
+	
+	.space{
 		width:135px;
 		min-height: 120px;
 		max-height: 120px;
