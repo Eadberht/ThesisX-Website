@@ -18,6 +18,14 @@
 }
 
 @font-face {
+    font-family: 'FoundersGrotesk';
+    src: url('../fonts/FoundersGroteskWeb-RegularItalic.woff') format('woff');
+    /*local("HelveticaNeue-Bold"),*/
+    /*url(MgOpenModernaBold.ttf);*/
+    font-weight: italic;
+}
+
+@font-face {
     font-family: 'glyphs';
     src: url("../fonts/Glyph_003.otf") format("opentype");
 }
