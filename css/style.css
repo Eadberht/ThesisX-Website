@@ -4,6 +4,7 @@
 @font-face {
     font-family: 'FoundersGrotesk';
     src: url('../fonts/FoundersGroteskWeb-Regular.woff') format('woff');
+	src: local('☺'), url('../fonts/FoundersGroteskWeb-Regular.woff') format('woff'), url('../fonts/FoundersGroteskWeb-Regular.otf') format('truetype');
     /*local("HelveticaNeue-Bold"),*/
     /*url(MgOpenModernaBold.ttf);*/
     font-weight: normal;
@@ -25,6 +26,7 @@
 
 
 body {
+	letter-spacing:0;
     font-family: FoundersGrotesk, Gotham, "Helvetica Neue", Helvetica, Arial, sans-serif;
     background-color:#59cbe8;
     font-weight:normal;
@@ -168,6 +170,7 @@ footer{
     z-index : 10;
     background-color : #59cbe8;
 }
+
 span.project {
     display : none;
 }
@@ -308,7 +311,7 @@ nav{
 	font-size:14px;
 	z-index:999999999;
 	float:left;
-	width:100%;
+	width:90%;
 	position:absolute;
 	padding-right:40px;
 
@@ -329,6 +332,7 @@ nav a{
 	display:inline;
 	margin-top:-100px;
 	padding-top:10px;
+	
 }
 #about{
 		position:absolute;
@@ -353,3 +357,9 @@ nav a{
 .sImg{
 	max-width:400px;
 }
+
+.space{
+	font-family: FoundersGrotesk, Gotham, "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+
+
