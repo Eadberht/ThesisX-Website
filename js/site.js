@@ -892,7 +892,7 @@ $(".brand").click(function(evt) {
 		 $("#navi img").removeClass('sImg');
 });
 
-  /* zooms out to the main page */
+  /* zooms out to the main page
   $("#mainContainer").click(function(evt) {
 	  $(".space").hide(1000);
 	  $(".studentPage").data('clicked','close');
@@ -903,7 +903,7 @@ $(".brand").click(function(evt) {
 		$(".navText").hide();
 	  	$("#revealAll").show();
 		
-  });
+  }); */
 
 
   $(window).resize(function() {
