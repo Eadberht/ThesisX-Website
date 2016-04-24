@@ -363,4 +363,11 @@ nav a{
 	font-family: FoundersGrotesk, Gotham, "Helvetica Neue", Helvetica, Arial, sans-serif;
 }
 
+.studentInfo a:hover{
+	color:white;
+	opacity:.5;
+}
 
+.studentPage{
+	padding:1px;
+}
