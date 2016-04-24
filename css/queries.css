@@ -10,7 +10,7 @@
 }
 	#navi img{
 		margin-top:5px;
-		width:240px;
+		width:220px;
 	}
 
 	#navi {
@@ -24,8 +24,8 @@
 	}
 
 	#thesisStatement{
-		font-size : 30px;
-		line-height:1.2;
+		font-size : 20px;
+		line-height:.7;
 		margin-top: 50px;
 	}
 	
@@ -38,7 +38,7 @@
 		padding-top:5px;
 		margin-top:-5px;
 		border-radius:40px;
-		width:40px;
+		width:20px;
 	}
 
 	#revealAll{
@@ -46,7 +46,6 @@
 	}
 
 	#about{
-		height:120%;
 		width:100%;
 		margin-right:0px;
 	}
@@ -110,11 +109,13 @@
 		width:250px;
 		min-height: 500px;
 		max-height: 500px;
-		overflow:scroll;
+		overflow-y:scroll;
+		overflow-x:hidden;
 		-webkit-overflow-scrolling: touch;
 		position:relative;
 		display:inline-block;
 		z-index:9999999;
+		border-bottom-color:white;
 	}
 
 	.space p{
@@ -211,18 +212,21 @@
 	}
 
 	html{
-		-webkit-overflow-scrolling: touch;
+		
 	}
 	
 	#thesisStatement{
+		
 		-webkit-overflow-scrolling: touch;
 	}
 	
 	#mainContainer{
+	
 		-webkit-overflow-scrolling: touch;
 	}
 	
 	#wrapper{
+	
 		-webkit-overflow-scrolling: touch;
 	}
 }
@@ -376,6 +380,18 @@
 	  margin-top : 43px
 	}
 
+	#about{
+		height:2000px;
+		overflow:hidden;
+	}
+	
+	html{
+		overflow:hidden;
+	}
+	
+	.navText{
+		margin-top:5px;
+}
 }
 
 
@@ -526,6 +542,14 @@
 	html{
 		overflow:hidden;
 	}
+	
+	.navText{
+	margin-top:5px;
+	}
+	
+	#about{
+		height:2000px;
+	}
 }
 
 @media screen and (min-width: 1201px) and (max-width: 1439px) {
@@ -675,6 +699,14 @@
 
 	html{
 		overflow:hidden;
+	}
+	
+	.navText{
+	margin-top:5px;
+	}
+	
+	#about{
+		height:2000px;
 	}
 
 }
@@ -831,6 +863,10 @@
 
 	html{
 		overflow:hidden;
+	}
+	
+	#about{
+		height:2000px;
 	}
 
 }

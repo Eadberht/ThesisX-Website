@@ -1,5 +1,5 @@
 $(document).ready(function() {
-
+	  $(".space").hide();
 
 	$.zoomooz.setup({root:$("#mainContainer"),targetsize:1});
 	var xs = window.matchMedia( "(min-width: 0) and (max-width: 768px) " );
@@ -23,22 +23,59 @@ $(document).ready(function() {
   $("html").animate({"opacity":"100"},16000);
   
   if (xs.matches) {
+	  
+	   /* changes all the revealed statemetents to names */
+  $("#revealAll").click(function(e) {
+	   $(".navText").hide();
+	  namesShown = !namesShown;
+	  for ( var i = 0; i < studentNames.length; i++) {
+		  $(".studentName").eq(i).text(function(a, text){
+			  if (namesShown) {
+			  $(this).removeClass('swap');
+			  return studentQuotes[i];
+
+		  }
+		  else {
+			  $(this).addClass('swap');
+			  return studentNames[i];
+		  }
+		});
+	  }
+
+
+	   if(aboutUp){
+
+		  $("#about").animate({"margin-top":"1000px"}, 500);
+		  $("#about").animate({"opacity":"0"}, 200);
+		  $("#thesisStatement").animate({"margin-top":"50px"}, 500);
+		  $("#about").hide(100);
+		  aboutUp=false;
+		  window.setTimeout("$('#thesisStatement').css('z-index','1')",1000);
+ 		 $(".navText").hide();
+			 $(".navText").hide();
+	  }
+
+  });
+  
+  
 	  /* Uses the punctuation to zoom to the student pages ".space" */
   $(".studentPage").click(function(evt) {
 
 	  var index = $(this).children(".space").index(".space");
 
-		
+		if($(".studentPage").data('clicked')=='close'){
 	   //if( $(".studentPage").data('clicked') == 'close'){
 	  whosOpen=index;
 	  $(this).removeClass('shake-chunk');
-	  $(this).children(".space").show();
-	  $(this).children(".space").zoomTo({targetsize:.8, duration:1000, closeclick: false});
-	 
+	  $(".studentPage").eq(index).children(".space").show();
+	 //$(".studentPage").eq(index).children(".space").zoomTo({targetsize:.8, duration:1000, closeclick: false});
+	  //$("#navi").eq(whosOpen-1).animate({"width":"200px"},2000);
+
 	  //$("#navi").eq(whosOpen-1).animate({"width":"200px"},2000);
 	  evt.stopPropagation();
 	  $(".studentPage").data('clicked','open');
 	   //}
+		}
 	   
 	   if($(".studentPage").data('clicked')=='open'){
 	 	$("#aboutClick").html('<div class="navText">Close</div>&para;');
@@ -129,7 +166,241 @@ $(document).ready(function() {
   
   }
   
-  if (md.matches) {
+  else if (sm.matches) {
+	  
+	  $(".studentName").hover(
+  	function(){
+
+	  var index = $(this).index(".studentName");
+
+	  if($(".studentName").eq(index).data('on')==='yes'){
+
+	  	$("#descriptionText").text(function(a, text){
+
+	  		return studentNames[index];
+	  	});
+
+		  if(namesShown){
+
+			$("#descriptionText").animate({"opacity":"100"},200);
+
+		  }
+	  }
+
+	 },
+
+	function(){
+
+	  $("#descriptionText").animate({"opacity":"0"},200);
+
+  	});
+	
+	  
+	   /* changes all the revealed statemetents to names */
+  $("#revealAll").click(function(e) {
+	  namesShown = !namesShown;
+	  for ( var i = 0; i < studentNames.length; i++) {
+		  $(".studentName").eq(i).text(function(a, text){
+			  if (namesShown) {
+			  $(this).removeClass('swap');
+			  return studentQuotes[i];
+
+		  }
+		  else {
+			  $(this).addClass('swap');
+			  return studentNames[i];
+		  }
+		});
+	  }
+
+
+	   if(aboutUp){
+
+		  $("#about").animate({"margin-top":"1000px"}, 500);
+		  $("#about").animate({"opacity":"0"}, 200);
+		  $("#thesisStatement").animate({"margin-top":"0px"}, 500);
+		  $("#about").hide(100);
+		  aboutUp=false;
+		  window.setTimeout("$('#thesisStatement').css('z-index','1')",1000);
+
+		  $("#aboutClick").html('<div class="navText">About</div>&dagger;');
+
+	  }
+
+  });
+  
+	  /* Uses the punctuation to zoom to the student pages ".space" */
+  $(".studentPage").click(function(evt) {
+
+	  var index = $(this).children(".space").index(".space");
+
+		
+	   //if( $(".studentPage").data('clicked') == 'close'){
+	  whosOpen=index;
+	  $(this).removeClass('shake-chunk');
+	  $(this).children(".space").show();
+	  $(this).children(".space").zoomTo({targetsize:.8, duration:1000, closeclick: false});
+	 
+	  //$("#navi").eq(whosOpen-1).animate({"width":"200px"},2000);
+	  evt.stopPropagation();
+	  $(".studentPage").data('clicked','open');
+	   //}
+	   
+	   if($(".studentPage").data('clicked')=='open'){
+	 	$("#aboutClick").html('<div class="navText">Close</div>&para;');
+		$(".navText").hide();
+	  	$("#revealAll").hide();
+		 //$("#navi").animate({"padding-top":"10px"},500);
+		 $("#navi img").animate({"opacity":"0"},200);
+		}
+	
+	$('.studentPage').css( 'cursor', 'default' );
+	
+  });
+  
+	   /* Reveals the nav button names */
+   $("#revealAll").hover(
+   	function(){
+
+	  $(".navText").eq(0).show("slide", {direction: "right" }, "fast");
+	  $(".navText").data('open','yes');
+
+  	},
+ 	 function(){
+
+	  $(".navText").eq(0).hide("slide", {direction: "right" }, "fast");
+	  $(".navText").data('open','no');
+
+ 	 });
+
+
+  /* Reveals the nav about button name */
+  $("#aboutClick").hover(
+  	function(){
+
+	  if($(".navText").data('open')=='no'){
+
+	 	 $(".navText").eq(1).show("slide", {direction: "right" }, "fast");
+	  }
+
+	  },
+
+	function(){
+
+	  	$(".navText").eq(1).hide("slide", {direction: "right" }, "fast");
+
+  });
+  
+ 	 $(".studentName").css("opacity","0");
+	 /* Slides up about box & changes Pilcro*/
+  $("#aboutClick").click(function(e) {
+
+	  var dWidth = $(window).width();
+	  
+	    if($(".studentPage").data('clicked')=='open'){
+			 $(".space").hide(1000);
+	  		$(".studentPage").data('clicked','close');
+	 		 $("#mainContainer").zoomTo({targetsize:1, duration:1000});
+	 		$("#aboutClick").html('<div class="navText">About</div>&dagger;');
+			$(".navText").hide();
+	  		$("#revealAll").show();
+	    $("#navi").animate({"padding-top":"30"},500);
+	   $("#navi img").animate({"opacity":"100"},2000);
+		}
+
+	  else if(!aboutUp){
+
+		  $("#thesisStatement").css("z-index","-1");
+		  $("#about").show(10);
+
+		  $("#about").animate({"opacity":"100"}, 10);
+		 // $("#about").animate({"margin-top":"-300px"}, 'fast', );
+		 $("#about").animate( { marginTop: 40 },{ duration: 2000, easing: 'easeOutQuart' });
+		  $("#thesisStatement").animate({"margin-top":"-700px"}, 500);
+		  aboutUp=true;
+		  $("#aboutClick").html('<div class="navText">Close</div>&para;');
+
+	  }
+
+	  else if(aboutUp){
+
+		  $("#about").animate({"margin-top":"1000px"}, 500);
+		  $("#about").animate({"opacity":"0"}, 200);
+		  $("#thesisStatement").animate({"margin-top":"100px"}, 500);
+		  $("#about").hide(100);
+		  aboutUp=false;
+		  window.setTimeout("$('#thesisStatement').css('z-index','1')",1000);
+
+		  $("#aboutClick").html('<div class="navText">About</div>&dagger;');
+
+	  }
+  });
+  }
+  
+  
+  
+  else if (md.matches) {
+	  
+	  $(".studentName").hover(
+  	function(){
+
+	  var index = $(this).index(".studentName");
+
+	  if($(".studentName").eq(index).data('on')==='yes'){
+
+	  	$("#descriptionText").text(function(a, text){
+
+	  		return studentNames[index];
+	  	});
+
+		  if(namesShown){
+
+			$("#descriptionText").animate({"opacity":"100"},200);
+
+		  }
+	  }
+
+	 },
+
+	function(){
+
+	  $("#descriptionText").animate({"opacity":"0"},200);
+
+  	});
+	  
+	   /* changes all the revealed statemetents to names */
+  $("#revealAll").click(function(e) {
+	  namesShown = !namesShown;
+	  for ( var i = 0; i < studentNames.length; i++) {
+		  $(".studentName").eq(i).text(function(a, text){
+			  if (namesShown) {
+			  $(this).removeClass('swap');
+			  return studentQuotes[i];
+
+		  }
+		  else {
+			  $(this).addClass('swap');
+			  return studentNames[i];
+		  }
+		});
+	  }
+
+
+	   if(aboutUp){
+
+		  $("#about").animate({"margin-top":"1000px"}, 500);
+		  $("#about").animate({"opacity":"0"}, 200);
+		  $("#thesisStatement").animate({"margin-top":"0px"}, 500);
+		  $("#about").hide(100);
+		  aboutUp=false;
+		  window.setTimeout("$('#thesisStatement').css('z-index','1')",1000);
+
+		  $("#aboutClick").html('<div class="navText">About</div>&dagger;');
+
+	  }
+
+  });
+  
 	  /* Uses the punctuation to zoom to the student pages ".space" */
   $(".studentPage").click(function(evt) {
 
@@ -240,6 +511,66 @@ $(document).ready(function() {
   
   else if (lg.matches) {
 	  
+	  $(".studentName").hover(
+  	function(){
+
+	  var index = $(this).index(".studentName");
+
+	  if($(".studentName").eq(index).data('on')==='yes'){
+
+	  	$("#descriptionText").text(function(a, text){
+
+	  		return studentNames[index];
+	  	});
+
+		  if(namesShown){
+
+			$("#descriptionText").animate({"opacity":"100"},200);
+
+		  }
+	  }
+
+	 },
+
+	function(){
+
+	  $("#descriptionText").animate({"opacity":"0"},200);
+
+  	});
+	  
+	   /* changes all the revealed statemetents to names */
+  $("#revealAll").click(function(e) {
+	  namesShown = !namesShown;
+	  for ( var i = 0; i < studentNames.length; i++) {
+		  $(".studentName").eq(i).text(function(a, text){
+			  if (namesShown) {
+			  $(this).removeClass('swap');
+			  return studentQuotes[i];
+
+		  }
+		  else {
+			  $(this).addClass('swap');
+			  return studentNames[i];
+		  }
+		});
+	  }
+
+
+	   if(aboutUp){
+
+		  $("#about").animate({"margin-top":"1000px"}, 500);
+		  $("#about").animate({"opacity":"0"}, 200);
+		  $("#thesisStatement").animate({"margin-top":"0px"}, 500);
+		  $("#about").hide(100);
+		  aboutUp=false;
+		  window.setTimeout("$('#thesisStatement').css('z-index','1')",1000);
+
+		  $("#aboutClick").html('<div class="navText">About</div>&dagger;');
+
+	  }
+
+  });
+	  
 	  /* Uses the punctuation to zoom to the student pages ".space" */
   $(".studentPage").click(function(evt) {
 
@@ -349,9 +680,19 @@ $(document).ready(function() {
   }
   
   $("#about").hide();
-  $(".space").hide();
   $(".navText").hide();
   $(".navText").data('open','no');
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -440,32 +781,6 @@ $(document).ready(function() {
 
     /* Controls the hover box */
 
-  $(".studentName").hover(
-  	function(){
-
-	  var index = $(this).index(".studentName");
-
-	  if($(".studentName").eq(index).data('on')==='yes'){
-
-	  	$("#descriptionText").text(function(a, text){
-
-	  		return studentNames[index];
-	  	});
-
-		  if(namesShown){
-
-			$("#descriptionText").animate({"opacity":"100"},200);
-
-		  }
-	  }
-
-	 },
-
-	function(){
-
-	  $("#descriptionText").animate({"opacity":"0"},200);
-
-  	});
 	
 	$(".prevo").hover(
 	function(){
@@ -591,41 +906,6 @@ $(".brand").click(function(evt) {
   });
 
 
-
-  /* changes all the revealed statemetents to names */
-  $("#revealAll").click(function(e) {
-	  namesShown = !namesShown;
-	  for ( var i = 0; i < studentNames.length; i++) {
-		  $(".studentName").eq(i).text(function(a, text){
-			  if (namesShown) {
-			  $(this).removeClass('swap');
-			  return studentQuotes[i];
-
-		  }
-		  else {
-			  $(this).addClass('swap');
-			  return studentNames[i];
-		  }
-		});
-	  }
-
-
-	   if(aboutUp){
-
-		  $("#about").animate({"margin-top":"1000px"}, 500);
-		  $("#about").animate({"opacity":"0"}, 200);
-		  $("#thesisStatement").animate({"margin-top":"0px"}, 500);
-		  $("#about").hide(100);
-		  aboutUp=false;
-		  window.setTimeout("$('#thesisStatement').css('z-index','1')",1000);
-
-		  $("#aboutClick").html('<div class="navText">About</div>&dagger;');
-
-	  }
-
-  });
-
-
   $(window).resize(function() {
 	  if($(".studentPage").data('clicked')=='open'){
 	 	$(".space").eq(whosOpen).zoomTo({targetsize:.8, duration:20});
@@ -637,5 +917,16 @@ $(".brand").click(function(evt) {
   $("#descriptionText").css('margin-left',(event.pageX-20));
   $("#descriptionText").css('margin-top',(event.pageY-60));
   });
+  
+
+  	
+  	document.ontouchstart = function(e){ 
+		if($(".studentPage").data('clicked')=='open'){
+			
+		//e.preventDefault(); 
+			}
+		}
+
+
 
 });
