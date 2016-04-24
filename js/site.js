@@ -24,6 +24,20 @@ $(document).ready(function() {
   
   if (xs.matches) {
 	  
+	    /* Fail Safe Button */
+  $("#mainContainer").click(function(evt) {
+	  $(".space").hide(1000);
+	  $(".studentPage").data('clicked','close');
+	  $(this).zoomTo({targetsize:1, duration:1000});
+	   $("#navi").animate({"padding-top":"30"},500);
+	   $("#navi img").animate({"opacity":"100"},2000)
+	 	$("#aboutClick").html('<div class="navText">About</div>&dagger;');
+		$(".navText").hide();
+	  	$("#revealAll").show();
+		
+  }); 
+  
+	  
 	   /* changes all the revealed statemetents to names */
   $("#revealAll").click(function(e) {
 	   $(".navText").hide();
