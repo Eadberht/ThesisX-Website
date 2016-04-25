@@ -296,8 +296,8 @@
 
 	.space{
 		width:150px;
-		min-height: 120px;
-		max-height: 120px;
+		min-height: 125px;
+		max-height: 125px;
 		position:relative;
 		display:inline-block;
 		z-index:9999999;
@@ -375,7 +375,7 @@
 
 	.studentInfo{
 		vertical-align:text-bottom;
-		width:25px;
+		width:22px;
 		float:left;
 	  margin-top : 43px
 	}
@@ -455,8 +455,8 @@
 
 	.space{
 		width:200px;
-		min-height: 120px;
-		max-height: 120px;
+		min-height: 130px;
+		max-height: 130px;
 		position:relative;
 		display:inline-block;
 		z-index:9999999;
@@ -613,8 +613,8 @@
 
 	.space{
 		width:200px;
-		min-height: 100px;
-		max-height: 100px;
+		min-height: 120px;
+		max-height: 120px;
 		position:relative;
 		display:inline-block;
 		z-index:9999999;
@@ -872,9 +872,13 @@
 }
 
 .space{
-		overflow-y:scroll;
+		overflow-y:auto;
 		overflow-x:hidden;
-		-webkit-overflow-scrolling: touch;
 	}
+	
+::-webkit-scrollbar {
+	opacity:0;
+	width:1px;
+}
 	
 	

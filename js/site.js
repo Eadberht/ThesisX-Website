@@ -80,63 +80,7 @@ $(document).ready(function() {
   
   
 	  /* Uses the punctuation to zoom to the student pages ".space" */
-  $(".studentPage").click(function(evt) {
-
-	  var index = $(this).children(".space").index(".space");
-
-		if($(".studentPage").data('clicked')=='close'){
-	   //if( $(".studentPage").data('clicked') == 'close'){
-	  whosOpen=index;
-	  $(this).removeClass('shake-slow');
-	  $(".studentPage").eq(index).children(".space").show();
-	 //$(".studentPage").eq(index).children(".space").zoomTo({targetsize:.8, duration:1000, closeclick: false});
-	  //$("#navi").eq(whosOpen-1).animate({"width":"200px"},2000);
-
-	  //$("#navi").eq(whosOpen-1).animate({"width":"200px"},2000);
-	  evt.stopPropagation();
-	  $(".studentPage").data('clicked','open');
-	   //}
-		}
-	   
-	   if($(".studentPage").data('clicked')=='open'){
-	 	$("#aboutClick").html('<div class="navText">Close</div>&para;');
-		$(".navText").hide();
-	  	$("#revealAll").hide();
-		 $("#navi img").animate({"opacity":"0"},200);
-		}
-	
-	$('.studentPage').css( 'cursor', 'default' );
-	
-  });
-	  
-  $(".studentName").click(function(evt) {
-
-	  var index = $(this).index(".studentName");
-
-		
-	   //if( $(".studentPage").data('clicked') == 'close'){
-	  whosOpen=index;
-	  $(".studentPage").removeClass('shake-slow');
-	  $(".studentPage").eq(index).children(".space").show();
-	 //$(".studentPage").eq(index).children(".space").zoomTo({targetsize:.8, duration:1000, closeclick: false});
-	  //$("#navi").eq(whosOpen-1).animate({"width":"200px"},2000);
-	 evt.stopPropagation();
-	  
-	  $(".studentPage").data('clicked','open');
-	   //}
-	   
-	   if($(".studentPage").data('clicked')=='open'){
-	 	$("#aboutClick").html('<div class="navText">Close</div>&para;');
-		$(".navText").hide();
-	  	$("#revealAll").hide();
-		 //$("#navi").animate({"padding-top":"10px"},500);
-		 $("#navi img").animate({"opacity":"0"},200);
-		 
-		}
-	
-	$('.studentPage').css( 'cursor', 'default' );
-	
-  });
+ 
   
   /* Slides up about box & changes Pilcro*/
   $("#aboutClick").click(function(e) {
