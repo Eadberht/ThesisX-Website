@@ -776,8 +776,8 @@
 	.space{
 		
 		width:200px;
-		min-height: 100px;
-		max-height: 100px;
+		min-height: 120px;
+		max-height: 120px;
 		position:relative;
 		display:inline-block;
 		z-index:9999999;
@@ -870,3 +870,11 @@
 	}
 
 }
+
+.space{
+		overflow-y:scroll;
+		overflow-x:hidden;
+		-webkit-overflow-scrolling: touch;
+	}
+	
+	
